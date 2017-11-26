@@ -11,10 +11,21 @@
    
 $(function() {
     
-    var $formLogin = $('#login-form');
-    var $formLost = $('#lost-form');
-    var $formRegister = $('#register-form');
-    var $divForms = $('#div-forms');
+    var $viewerFormLogin = $('#viewer-login-form');
+    var $viewerFormLost = $('#viewer-lost-form');
+    var $viewerFormRegister = $('#viewer-register-form');
+    var $viewerDivForms = $('#viewer-div-forms');
+	
+	var $providerFormLogin = $('#provider-login-form');
+    var $providerFormLost = $('#provider-lost-form');
+    var $providerFormRegister = $('#provider-register-form');
+	var $providerDivForms = $('#provider-div-forms');
+	
+	var $adminFormLogin = $('#admin-login-form');
+    var $adminFormLost = $('#admin-lost-form');
+    var $adminFormRegister = $('#admin-register-form');
+	var $adminDivForms = $('#admin-div-forms');
+	
     var $modalAnimateTime = 300;
     var $msgAnimateTime = 150;
     var $msgShowTime = 2000;
@@ -57,14 +68,29 @@ $(function() {
         return false;
     });*/
     
-    $('#login_register_btn').click( function () { modalAnimate($formLogin, $formRegister) });
-    $('#register_login_btn').click( function () { modalAnimate($formRegister, $formLogin); });
-    $('#login_lost_btn').click( function () { modalAnimate($formLogin, $formLost); });
-    $('#lost_login_btn').click( function () { modalAnimate($formLost, $formLogin); });
-    $('#lost_register_btn').click( function () { modalAnimate($formLost, $formRegister); });
-    $('#register_lost_btn').click( function () { modalAnimate($formRegister, $formLost); });
-    
-    function modalAnimate ($oldForm, $newForm) {
+    $('#viewer-login_register_btn').click( function () { modalAnimate($viewerFormLogin, $viewerFormRegister, $viewerDivForms) });
+    $('#viewer-register_login_btn').click( function () { modalAnimate($viewerFormRegister, $viewerFormLogin, $viewerDivForms); });
+    $('#viewer-login_lost_btn').click( function () { modalAnimate($viewerFormLogin, $viewerFormLost, $viewerDivForms); });
+    $('#viewer-lost_login_btn').click( function () { modalAnimate($viewerFormLost, $viewerFormLogin, $viewerDivForms); });
+    $('#viewer-lost_register_btn').click( function () { modalAnimate($viewerFormLost, $viewerFormRegister, $viewerDivForms); });
+    $('#viewer-register_lost_btn').click( function () { modalAnimate($viewerFormRegister, $viewerFormLost, $viewerDivForms); });   
+	
+	$('#provider-login_register_btn').click( function () { modalAnimate($providerFormLogin, $providerFormRegister, $providerDivForms) });
+    $('#provider-register_login_btn').click( function () { modalAnimate($providerFormRegister, $providerFormLogin, $providerDivForms); });
+    $('#provider-login_lost_btn').click( function () { modalAnimate($providerFormLogin, $providerFormLost, $providerDivForms); });
+    $('#provider-lost_login_btn').click( function () { modalAnimate($providerFormLost, $providerFormLogin, $providerDivForms); });
+    $('#provider-lost_register_btn').click( function () { modalAnimate($providerFormLost, $providerFormRegister, $providerDivForms); });
+    $('#provider-register_lost_btn').click( function () { modalAnimate($formRegister, $providerFormLost, $providerDivForms); });
+	
+	$('#admin-login_register_btn').click( function () { modalAnimate($adminFormLogin, $adminFormRegister, $adminDivForms) });
+    $('#admin-register_login_btn').click( function () { modalAnimate($adminFormRegister, $adminFormLogin,$adminDivForms); });
+    $('#admin-login_lost_btn').click( function () { modalAnimate($adminFormLogin, $adminFormLost,$adminDivForms); });
+    $('#admin-lost_login_btn').click( function () { modalAnimate($adminFormLost, $adminFormLogin, $adminDivForms); });
+    $('#admin-lost_register_btn').click( function () { modalAnimate($adminFormLost, $adminFormRegister, $adminDivForms); });
+    $('#admin-register_lost_btn').click( function () { modalAnimate($adminFormRegister, $adminFormLost, $adminDivForms); });
+	
+	
+    function modalAnimate ($oldForm, $newForm, $divForms) {
         var $oldH = $oldForm.height();
         var $newH = $newForm.height();
         $divForms.css("height",$oldH);

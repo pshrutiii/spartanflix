@@ -13,7 +13,52 @@
       exit;
     }
 
-    if (!empty($_POST['login-submit'])) {
+    if (!empty($_POST['admin-login-submit'])) {
+        $user=$_POST['login_user'];
+        $pass=$_POST['login_pass'];
+
+        $sql = "SELECT * FROM users WHERE email = '". $user ."' AND password = '" . $pass . "' ;";
+        $result = pg_query($conn, $sql);
+
+        if (pg_numrows($result) > 0) {
+            while ($row = pg_fetch_row($result)) {
+                $u_fname = $row[0];
+                $u_lname = $row[1];
+                $u_email = $row[2];
+                $u_addr = $row[4];
+                $u_hphone = $row[5];
+                $u_cphone = $row[6];
+                //header("Location: users.php");
+            }
+        } else {
+            //echo "0 results";
+            header("Location: ../services/incorrect-login.php");
+        }
+		
+		
+	if (!empty($_POST['viewer-login-submit'])) {
+        $user=$_POST['login_user'];
+        $pass=$_POST['login_pass'];
+
+        $sql = "SELECT * FROM users WHERE email = '". $user ."' AND password = '" . $pass . "' ;";
+        $result = pg_query($conn, $sql);
+
+        if (pg_numrows($result) > 0) {
+            while ($row = pg_fetch_row($result)) {
+                $u_fname = $row[0];
+                $u_lname = $row[1];
+                $u_email = $row[2];
+                $u_addr = $row[4];
+                $u_hphone = $row[5];
+                $u_cphone = $row[6];
+                //header("Location: users.php");
+            }
+        } else {
+            //echo "0 results";
+            header("Location: ../services/incorrect-login.php");
+        }
+		
+	if (!empty($_POST['provider-login-submit'])) {
         $user=$_POST['login_user'];
         $pass=$_POST['login_pass'];
 

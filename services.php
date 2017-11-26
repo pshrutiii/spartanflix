@@ -14,33 +14,43 @@
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-lg-6 col-md-6 text-center">
+			<div class="col-lg-4 col-md-4 text-center">
+                <div class="service-box">
+                    <!--a href="services/gallery.php"-->
+					<a href="#" data-toggle="modal" data-target="#viewer-login-modal">
+	                    <i class="fa fa-4x fa-th text-primary sr-icons"></i>
+	                    <h3>Viewer</h3>
+                	</a>
+                    <p class="text-muted">Join the world of shows in one place more than ever before at a cheap price.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 text-center">
             	<div class="service-box">
-            		<a href="#" data-toggle="modal" data-target="#login-modal">
-            			<i class="fa fa-4x fa-cloud-upload text-primary sr-icons"></i>
-            			<h3>Photographer</h3> 
+            		<a href="#" data-toggle="modal" data-target="#provider-login-modal">
+						<i class="fa fa-4x fa-upload text-primary sr-icons"></i>
+            			<h3>Ad/Content Providers</h3> 
             		</a>
-		        	<p class="text-muted">Build a profile with us and we'll help you set up a very professional looking page that's customized to your demands.</p>
+		        	<p class="text-muted">Would you like to show your ads or content through us, please create an account and get started.</p>
 		        </div>
             </div>
-            <div class="col-lg-6 col-md-6 text-center">
+            <div class="col-lg-4 col-md-4 text-center">
                 <div class="service-box">
-                    <a href="services/gallery.php">
-	                    <i class="fa fa-4x fa-th text-primary sr-icons"></i>
-	                    <h3>Customer</h3>
+                    <a href="#" data-toggle="modal" data-target="#admin-login-modal">
+	                    <i class="fa fa-4x fa-lock text-primary sr-icons"></i>
+	                    <h3>Admin</h3>
                 	</a>
-                    <p class="text-muted">Presenting a community of artists and easy to browse gallery. We make buying and selling images easier.</p>
+                    <p class="text-muted">Only accessible for Spanflix internal admin.</p>
                 </div>
             </div>
         </div>
     </div>
 
-<!-- BEGIN # MODAL LOGIN -->
-<div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+<!-- BEGIN # VIEWER MODAL LOGIN -->
+<div class="modal fade" id="viewer-login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
     	<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header" align="center">
-					<h4>Personalized Gallery
+					<h4>Viewer
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 						<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
 					</button>
@@ -48,17 +58,17 @@
 				</div>
                 
                 <!-- Begin # DIV Form -->
-                <div id="div-forms">
+                <div id="viewer-div-forms">
                 
                     <!-- Begin # Login Form -->
-                    <form id="login-form" method="post" action="page.php">
+                    <form id="viewer-login-form" method="post" action="page.php">
 		                <div class="modal-body">
-                            <div id="div-login-msg">
-                                <div id="icon-login-msg" class="glyphicon glyphicon-chevron-right"></div>
-                                <span id="text-login-msg">Login to your account.</span>
+                            <div id="viewer-div-login-msg">
+                                <div id="viewer-icon-login-msg" class="glyphicon glyphicon-chevron-right"></div>
+                                <span id="viewer-text-login-msg">Login to your account.</span>
                             </div>
-				    		<input id="login_user" class="form-control" type="text" placeholder="E-Mail" name="login_user" required>
-				    		<input id="login_pass" class="form-control" type="password" placeholder="Password" name="login_pass" required>
+				    		<input id="viewer-login_user" class="form-control" type="text" placeholder="E-Mail" name="login_user" required>
+				    		<input id="viewer-login_pass" class="form-control" type="password" placeholder="Password" name="login_pass" required>
                             <!--div class="checkbox">
                                 <label>
                                     <input type="checkbox"> Remember me
@@ -67,59 +77,59 @@
         		    	</div>
 				        <div class="modal-footer">
                             <div>
-                                <button type="submit" class="btn btn-primary btn-lg btn-block" name="login-submit" value="login">Login</button>
+                                <button type="submit" class="btn btn-primary btn-lg btn-block" name="viewer-login-submit" value="login">Login</button>
                             </div>
 				    	    <div>
-                                <button id="login_lost_btn" type="button" class="btn btn-link">Forgot Password?</button>
-                                <button id="login_register_btn" type="button" class="btn btn-link">Register</button>
+                                <button id="viewer-login_lost_btn" type="button" class="btn btn-link">Forgot Password?</button>
+                                <button id="viewer-login_register_btn" type="button" class="btn btn-link">Register</button>
                             </div>
 				        </div>
                     </form>
                     <!-- End # Login Form -->
                     
                     <!-- Begin | Lost Password Form -->
-                    <form id="lost-form" style="display:none;">
+                    <form id="viewer-lost-form" style="display:none;">
     	    		    <div class="modal-body">
-		    				<div id="div-lost-msg">
-                                <div id="icon-lost-msg" class="glyphicon glyphicon-chevron-right"></div>
-                                <span id="text-lost-msg">Enter Username</span>
+		    				<div id="viewer-div-lost-msg">
+                                <div id="viewer-icon-lost-msg" class="glyphicon glyphicon-chevron-right"></div>
+                                <span id="viewer-text-lost-msg">Enter Username</span>
                             </div>
-		    				<input id="lost_email" class="form-control" type="text" placeholder="E-Mail" required>
+		    				<input id="viewer-lost_email" class="form-control" type="text" placeholder="E-Mail" required>
             			</div>
 		    		    <div class="modal-footer">
                             <div>
                                 <button type="submit" class="btn btn-primary btn-lg btn-block">Send</button>
                             </div>
                             <div>
-                                <button id="lost_login_btn" type="button" class="btn btn-link">Login</button>
-                                <button id="lost_register_btn" type="button" class="btn btn-link">Register</button>
+                                <button id="viewer-lost_login_btn" type="button" class="btn btn-link">Login</button>
+                                <button id="viewer-lost_register_btn" type="button" class="btn btn-link">Register</button>
                             </div>
 		    		    </div>
                     </form>
                     <!-- End | Lost Password Form -->
                     
                     <!-- Begin | Register Form -->
-                    <form id="register-form" style="display:none;" method="post" action="includes/validate.php">
+                    <form id="viewer-register-form" style="display:none;" method="post" action="includes/validate.php">
             		    <div class="modal-body">
-		    				<div id="div-register-msg">
-                                <div id="icon-register-msg" class="glyphicon glyphicon-chevron-right"></div>
-                                <span id="text-register-msg">Register for an account.</span>
+		    				<div id="viewer-div-register-msg">
+                                <div id="viewer-icon-register-msg" class="glyphicon glyphicon-chevron-right"></div>
+                                <span id="viewer-text-register-msg">Register for an account.</span>
                             </div>
-		    				<input id="register_firstName" name="register_firstName" class="form-control" type="text" placeholder="First Name" required>
-                            <input id="register_lastName" name="register_lastName" class="form-control" type="text" placeholder="Last Name" required>
-                            <input id="register_email"  name="register_email" class="form-control" type="text" placeholder="E-Mail" required>
-                            <input id="register_password"  name="register_password" class="form-control" type="password" placeholder="Password" required>
-                            <input id="register_address" name="register_address" class="form-control" type="text" placeholder="Address" required>
-                            <input id="register_homePhone" name="register_homePhone" class="form-control" type="text" placeholder="Home Phone" required>
-                            <input id="register_cellPhone" name="register_cellPhone" class="form-control" type="text" placeholder="Cell Phone" required>
+		    				<input id="viewer-register_firstName" name="viewer-register_firstName" class="form-control" type="text" placeholder="First Name" required>
+                            <input id="viewer-register_lastName" name="viewer-register_lastName" class="form-control" type="text" placeholder="Last Name" required>
+                            <input id="viewer-register_email"  name="viewer-register_email" class="form-control" type="text" placeholder="E-Mail" required>
+                            <input id="viewer-register_password"  name="viewer-register_password" class="form-control" type="password" placeholder="Password" required>
+                            <input id="viewer-register_address" name="viewer-register_address" class="form-control" type="text" placeholder="Address" required>
+                            <input id="viewer-register_homePhone" name="viewer-register_homePhone" class="form-control" type="text" placeholder="Home Phone" required>
+                            <input id="viewer-register_cellPhone" name="viewer-register_cellPhone" class="form-control" type="text" placeholder="Cell Phone" required>
             			</div>
 		    		    <div class="modal-footer">
                             <div>
-                                <button type="submit" class="btn btn-primary btn-lg btn-block" name="register-submit" value="register">Register</button>
+                                <button type="submit" class="btn btn-primary btn-lg btn-block" name="viewer-register-submit" value="register">Register</button>
                             </div>
                             <div>
-                                <button id="register_login_btn" type="button" class="btn btn-link">Login</button>
-                                <button id="register_lost_btn" type="button" class="btn btn-link">Forgot Password?</button>
+                                <button id="viewer-register_login_btn" type="button" class="btn btn-link">Login</button>
+                                <button id="viewer-register_lost_btn" type="button" class="btn btn-link">Forgot Password?</button>
                             </div>
 		    		    </div>
                     </form>
@@ -127,14 +137,205 @@
                     
                 </div>
                 <!-- End # DIV Form http://bootsnipp.com/snippets/featured/modal-login-with-jquery-effects-->
-
-                
-
-
 			</div>
 		</div>
 	</div>
-    <!-- END # MODAL LOGIN -->
+    <!-- END # VIEWER MODAL LOGIN -->
+	
+	<!-- BEGIN # PROVIDER MODAL LOGIN -->
+<div class="modal fade" id="provider-login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+    	<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header" align="center">
+					<h4>Provider
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+					</button>
+					</h4>
+				</div>
+                
+                <!-- Begin # DIV Form -->
+                <div id="provider-div-forms">
+                
+                    <!-- Begin # Login Form -->
+                    <form id="provider-login-form" method="post" action="page.php">
+		                <div class="modal-body">
+                            <div id="provider-div-login-msg">
+                                <div id="provider-icon-login-msg" class="glyphicon glyphicon-chevron-right"></div>
+                                <span id="provider-text-login-msg">Login to your account.</span>
+                            </div>
+				    		<input id="provider-login_user" class="form-control" type="text" placeholder="E-Mail" name="login_user" required>
+				    		<input id="provider-login_pass" class="form-control" type="password" placeholder="Password" name="login_pass" required>
+                            <!--div class="checkbox">
+                                <label>
+                                    <input type="checkbox"> Remember me
+                                </label>
+                            </div-->
+        		    	</div>
+				        <div class="modal-footer">
+                            <div>
+                                <button type="submit" class="btn btn-primary btn-lg btn-block" name="provider-login-submit" value="login">Login</button>
+                            </div>
+				    	    <div>
+                                <button id="provider-login_lost_btn" type="button" class="btn btn-link">Forgot Password?</button>
+                                <button id="provider-login_register_btn" type="button" class="btn btn-link">Register</button>
+                            </div>
+				        </div>
+                    </form>
+                    <!-- End # Login Form -->
+                    
+                    <!-- Begin | Lost Password Form -->
+                    <form id="provider-lost-form" style="display:none;">
+    	    		    <div class="modal-body">
+		    				<div id="provider-div-lost-msg">
+                                <div id="provider-icon-lost-msg" class="glyphicon glyphicon-chevron-right"></div>
+                                <span id="provider-text-lost-msg">Enter Username</span>
+                            </div>
+		    				<input id="provider-lost_email" class="form-control" type="text" placeholder="E-Mail" required>
+            			</div>
+		    		    <div class="modal-footer">
+                            <div>
+                                <button type="submit" class="btn btn-primary btn-lg btn-block">Send</button>
+                            </div>
+                            <div>
+                                <button id="provider-lost_login_btn" type="button" class="btn btn-link">Login</button>
+                                <button id="provider-lost_register_btn" type="button" class="btn btn-link">Register</button>
+                            </div>
+		    		    </div>
+                    </form>
+                    <!-- End | Lost Password Form -->
+                    
+                    <!-- Begin | Register Form -->
+                    <form id="provider-register-form" style="display:none;" method="post" action="includes/validate.php">
+            		    <div class="modal-body">
+		    				<div id="provider-div-register-msg">
+                                <div id="provider-icon-register-msg" class="glyphicon glyphicon-chevron-right"></div>
+                                <span id="provider-text-register-msg">Register for an account.</span>
+                            </div>
+		    				<input id="provider-register_firstName" name="provider-register_firstName" class="form-control" type="text" placeholder="First Name" required>
+                            <input id="provider-register_lastName" name="provider-register_lastName" class="form-control" type="text" placeholder="Last Name" required>
+                            <input id="provider-register_email"  name="provider-register_email" class="form-control" type="text" placeholder="E-Mail" required>
+                            <input id="provider-register_password"  name="provider-register_password" class="form-control" type="password" placeholder="Password" required>
+                            <input id="provider-register_address" name="provider-register_address" class="form-control" type="text" placeholder="Address" required>
+                            <input id="provider-register_homePhone" name="provider-register_homePhone" class="form-control" type="text" placeholder="Home Phone" required>
+                            <input id="provider-register_cellPhone" name="provider-register_cellPhone" class="form-control" type="text" placeholder="Cell Phone" required>
+            			</div>
+		    		    <div class="modal-footer">
+                            <div>
+                                <button type="submit" class="btn btn-primary btn-lg btn-block" name="provider-register-submit" value="register">Register</button>
+                            </div>
+                            <div>
+                                <button id="provider-register_login_btn" type="button" class="btn btn-link">Login</button>
+                                <button id="provider-register_lost_btn" type="button" class="btn btn-link">Forgot Password?</button>
+                            </div>
+		    		    </div>
+                    </form>
+                    <!-- End | Register Form -->
+                    
+                </div>
+                <!-- End # DIV Form http://bootsnipp.com/snippets/featured/modal-login-with-jquery-effects-->
+			</div>
+		</div>
+	</div>
+    <!-- END # PROVIDER MODAL LOGIN -->
+	
+	
+	<!-- BEGIN # ADMIN MODAL LOGIN -->
+<div class="modal fade" id="admin-login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+    	<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header" align="center">
+					<h4>Admin
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+					</button>
+					</h4>
+				</div>
+                
+                <!-- Begin # DIV Form -->
+                <div id="admin-div-forms">
+                
+                    <!-- Begin # Login Form -->
+                    <form id="admin-login-form" method="post" action="page.php">
+		                <div class="modal-body">
+                            <div id="admin-div-login-msg">
+                                <div id="admin-icon-login-msg" class="glyphicon glyphicon-chevron-right"></div>
+                                <span id="admin-text-login-msg">Login to your account.</span>
+                            </div>
+				    		<input id="admin-login_user" class="form-control" type="text" placeholder="E-Mail" name="login_user" required>
+				    		<input id="admin-login_pass" class="form-control" type="password" placeholder="Password" name="login_pass" required>
+                            <!--div class="checkbox">
+                                <label>
+                                    <input type="checkbox"> Remember me
+                                </label>
+                            </div-->
+        		    	</div>
+				        <div class="modal-footer">
+                            <div>
+                                <button type="submit" class="btn btn-primary btn-lg btn-block" name="admin-login-submit" value="login">Login</button>
+                            </div>
+				    	    <div>
+                                <button id="admin-login_lost_btn" type="button" class="btn btn-link">Forgot Password?</button>
+                                <button id="admin-login_register_btn" type="button" class="btn btn-link">Register</button>
+                            </div>
+				        </div>
+                    </form>
+                    <!-- End # Login Form -->
+                    
+                    <!-- Begin | Lost Password Form -->
+                    <form id="admin-lost-form" style="display:none;">
+    	    		    <div class="modal-body">
+		    				<div id="admin-div-lost-msg">
+                                <div id="admin-icon-lost-msg" class="glyphicon glyphicon-chevron-right"></div>
+                                <span id="admin-text-lost-msg">Enter Username</span>
+                            </div>
+		    				<input id="admin-lost_email" class="form-control" type="text" placeholder="E-Mail" required>
+            			</div>
+		    		    <div class="modal-footer">
+                            <div>
+                                <button type="submit" class="btn btn-primary btn-lg btn-block">Send</button>
+                            </div>
+                            <div>
+                                <button id="admin-lost_login_btn" type="button" class="btn btn-link">Login</button>
+                                <button id="admin-lost_register_btn" type="button" class="btn btn-link">Register</button>
+                            </div>
+		    		    </div>
+                    </form>
+                    <!-- End | Lost Password Form -->
+                    
+                    <!-- Begin | Register Form -->
+                    <form id="admin-register-form" style="display:none;" method="post" action="includes/validate.php">
+            		    <div class="modal-body">
+		    				<div id="admin-div-register-msg">
+                                <div id="admin-icon-register-msg" class="glyphicon glyphicon-chevron-right"></div>
+                                <span id="admin-text-register-msg">Register for an account.</span>
+                            </div>
+		    				<input id="admin-register_firstName" name="admin-register_firstName" class="form-control" type="text" placeholder="First Name" required>
+                            <input id="admin-register_lastName" name="admin-register_lastName" class="form-control" type="text" placeholder="Last Name" required>
+                            <input id="admin-register_email"  name="admin-register_email" class="form-control" type="text" placeholder="E-Mail" required>
+                            <input id="admin-register_password"  name="admin-register_password" class="form-control" type="password" placeholder="Password" required>
+                            <input id="admin-register_address" name="admin-register_address" class="form-control" type="text" placeholder="Address" required>
+                            <input id="admin-register_homePhone" name="admin-register_homePhone" class="form-control" type="text" placeholder="Home Phone" required>
+                            <input id="admin-register_cellPhone" name="admin-register_cellPhone" class="form-control" type="text" placeholder="Cell Phone" required>
+            			</div>
+		    		    <div class="modal-footer">
+                            <div>
+                                <button type="submit" class="btn btn-primary btn-lg btn-block" name="admin-register-submit" value="register">Register</button>
+                            </div>
+                            <div>
+                                <button id="admin-register_login_btn" type="button" class="btn btn-link">Login</button>
+                                <button id="admin-register_lost_btn" type="button" class="btn btn-link">Forgot Password?</button>
+                            </div>
+		    		    </div>
+                    </form>
+                    <!-- End | Register Form -->
+                    
+                </div>
+                <!-- End # DIV Form http://bootsnipp.com/snippets/featured/modal-login-with-jquery-effects-->
+			</div>
+		</div>
+	</div>
+    <!-- END # ADMIN MODAL LOGIN -->
     <?php include("includes/footer.html"); ?>
 </body>
 </html>
