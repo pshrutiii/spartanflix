@@ -30,7 +30,7 @@
 <body>
     <?php include("../includes/nav.html"); ?>
     <div class="container-fluid padding-10 text-center">
-        <h2 class="section-heading">Search our Gallery</h2>
+        <h2 class="section-heading">Welcome to Dashboard</h2>
         <hr class="primary">
         <div id="custom-search-input">
             <form action="" method="GET" style="margin-bottom: 0">
