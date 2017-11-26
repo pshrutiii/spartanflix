@@ -119,9 +119,6 @@
                             <input id="viewer-register_lastName" name="viewer-register_lastName" class="form-control" type="text" placeholder="Last Name" required>
                             <input id="viewer-register_email"  name="viewer-register_email" class="form-control" type="text" placeholder="E-Mail" required>
                             <input id="viewer-register_password"  name="viewer-register_password" class="form-control" type="password" placeholder="Password" required>
-                            <input id="viewer-register_address" name="viewer-register_address" class="form-control" type="text" placeholder="Address" required>
-                            <input id="viewer-register_homePhone" name="viewer-register_homePhone" class="form-control" type="text" placeholder="Home Phone" required>
-                            <input id="viewer-register_cellPhone" name="viewer-register_cellPhone" class="form-control" type="text" placeholder="Cell Phone" required>
             			</div>
 		    		    <div class="modal-footer">
                             <div>
@@ -216,9 +213,6 @@
                             <input id="provider-register_lastName" name="provider-register_lastName" class="form-control" type="text" placeholder="Last Name" required>
                             <input id="provider-register_email"  name="provider-register_email" class="form-control" type="text" placeholder="E-Mail" required>
                             <input id="provider-register_password"  name="provider-register_password" class="form-control" type="password" placeholder="Password" required>
-                            <input id="provider-register_address" name="provider-register_address" class="form-control" type="text" placeholder="Address" required>
-                            <input id="provider-register_homePhone" name="provider-register_homePhone" class="form-control" type="text" placeholder="Home Phone" required>
-                            <input id="provider-register_cellPhone" name="provider-register_cellPhone" class="form-control" type="text" placeholder="Cell Phone" required>
             			</div>
 		    		    <div class="modal-footer">
                             <div>
@@ -314,9 +308,6 @@
                             <input id="admin-register_lastName" name="admin-register_lastName" class="form-control" type="text" placeholder="Last Name" required>
                             <input id="admin-register_email"  name="admin-register_email" class="form-control" type="text" placeholder="E-Mail" required>
                             <input id="admin-register_password"  name="admin-register_password" class="form-control" type="password" placeholder="Password" required>
-                            <input id="admin-register_address" name="admin-register_address" class="form-control" type="text" placeholder="Address" required>
-                            <input id="admin-register_homePhone" name="admin-register_homePhone" class="form-control" type="text" placeholder="Home Phone" required>
-                            <input id="admin-register_cellPhone" name="admin-register_cellPhone" class="form-control" type="text" placeholder="Cell Phone" required>
             			</div>
 		    		    <div class="modal-footer">
                             <div>
