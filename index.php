@@ -11,13 +11,11 @@
     <header>
         <div class="header-content">
             <div class="header-content-inner">
-                <h1 id="homeHeading">Spread the art of photography</h1>
+                <h1 id="homeHeading">SpartanFlix</h1>
                 <hr>
-                <p>We provide a portal for photographers to build their gallery and 
-                    have prospective buyers directly contact you for copyright permissions.
-                    How do <strong>YOU</strong> identify yourself? </p>
+                <p style="color:#fff;">Entertainment begins here!</p>
                 
-                <a href="services.php" class="btn coloredBtn btn-xl sr-button">Get Started</a>
+                <a href="about-us.php" class="btn coloredBtn btn-xl sr-button">Learn More</a>
             </div>
         </div>
     </header>
