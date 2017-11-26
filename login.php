@@ -1,6 +1,7 @@
 <html>
 <head>
 	<?php include("includes/header.html"); ?>
+	<link href="css/form.css" rel="stylesheet">
 </head>
 <body>
 	<?php include("includes/nav.html"); ?>

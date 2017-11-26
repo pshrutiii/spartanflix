@@ -7,7 +7,7 @@
     width: 350px;
 }
 
-#login-modal input[type=text], input[type=password] {
+input{
 	margin-top: 10px;
 }
 

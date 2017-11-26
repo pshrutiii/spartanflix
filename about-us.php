@@ -10,8 +10,7 @@
             <div class="col-lg-8 col-lg-offset-2 text-center">
                 <h2 class="section-heading">We've got what you need!</h2>
                 <hr class="primary">
-                <p class="">With Share Media™ you would have everything you need to get your gallery up and ready to sell in no time! We would spend the energy and resources to publicize and market your art while you sit back and receive calls from prospective buyers. We want your creativity and imagination to speak volumes. Ready to give us a try?</p>
-                <a href="/services.php" class="btn coloredBtn btn-xl sr-button ">View Services</a>
+                <p class="">SpantanFlix is a video streaming platform that allows viewers to browse, comment, favorite, and watch videos based on their subscription plans. We have site admin, who manages content being uploaded to the system and 3rd party Content & ad providers who use our system besides watchers. Ready to give us a try? Check out our VIEWER subscription plans.</p>
             </div>
         </div>
     </div>
@@ -21,152 +20,66 @@
 		<div class="col-md-3">
 			<div class="pricing hover-effect">
 				<div class="pricing-head">
-					<h3>Begginer <span>
-					Officia deserunt mollitia </span>
+					<h3>Beginner (limited)<span>
+					Movies + ads</span>
 					</h3>
-					<h4><i>$</i>5<i>.49</i>
+					<h4><i>$</i>24<i>.99</i>
 					<span>
 					Per Month </span>
 					</h4>
 				</div>
-				<ul class="pricing-content list-unstyled">
-					<li>
-						At vero eos
-					</li>
-					<li>
-						No Support
-					</li>
-					<li>
-						Fusce condimentum
-					</li>
-					<li>
-						Ut non libero
-					</li>
-					<li>
-						Consecte adiping elit
-					</li>
-				</ul>
 				<div class="pricing-footer">
-					<p>
-						 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero magna psum olor .
+					<p> Watch unlimited movies with ads.
 					</p>
-					<a href="javascript:;" class="btn yellow-crusta">
-					Sign Up
-					</a>
 				</div>
 			</div>
 		</div>
 		<div class="col-md-3">
 			<div class="pricing hover-effect">
 				<div class="pricing-head">
-					<h3>Pro <span>
-					Officia deserunt mollitia </span>
+					<h3>Beginner (unlimited) <span>
+					Movies + no ads </span>
 					</h3>
-					<h4><i>$</i>8<i>.69</i>
+					<h4><i>$</i>29<i>.99</i>
 					<span>
 					Per Month </span>
 					</h4>
 				</div>
-				<ul class="pricing-content list-unstyled">
-					<li>
-						At vero eos
-					</li>
-					<li>
-						No Support
-					</li>
-					<li>
-						Fusce condimentum
-					</li>
-					<li>
-						Ut non libero
-					</li>
-					<li>
-						Consecte adiping elit
-					</li>
-				</ul>
 				<div class="pricing-footer">
-					<p>
-						 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero magna psum olor .
+					<p> Watch unlimited movies without any interruptions.
 					</p>
-					<a href="javascript:;" class="btn yellow-crusta">
-					Sign Up
-					</a>
 				</div>
 			</div>
 		</div>
 		<div class="col-md-3">
 			<div class="pricing pricing-active hover-effect">
 				<div class="pricing-head pricing-head-active">
-					<h3>Expert <span>
-					Officia deserunt mollitia </span>
+					<h3>Pro (limited)<span>
+					Movies, Documentaries, Series + ads </span>
 					</h3>
-					<h4><i>$</i>13<i>.99</i>
+					<h4><i>$</i>44<i>.99</i>
 					<span>
 					Per Month </span>
 					</h4>
 				</div>
-				<ul class="pricing-content list-unstyled">
-					<li>
-						At vero eos
-					</li>
-					<li>
-						No Support
-					</li>
-					<li>
-						Fusce condimentum
-					</li>
-					<li>
-						Ut non libero
-					</li>
-					<li>
-						Consecte adiping elit
-					</li>
-				</ul>
 				<div class="pricing-footer">
-					<p>
-						 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero magna psum olor .
-					</p>
-					<a href="javascript:;" class="btn yellow-crusta">
-					Sign Up
-					</a>
+					<p> Access to ALL videos with ads.</p>
 				</div>
 			</div>
 		</div>
 		<div class="col-md-3">
 			<div class="pricing hover-effect">
 				<div class="pricing-head">
-					<h3>Hi-Tech <span>
-					Officia deserunt mollitia </span>
+					<h3>Pro (unlimited)<span>
+					Movies, Documentaries, Series + no ads </span>
 					</h3>
-					<h4><i>$</i>99<i>.00</i>
+					<h4><i>$</i>49<i>.99</i>
 					<span>
 					Per Month </span>
 					</h4>
 				</div>
-				<ul class="pricing-content list-unstyled">
-					<li>
-						At vero eos
-					</li>
-					<li>
-						No Support
-					</li>
-					<li>
-						Fusce condimentum
-					</li>
-					<li>
-						Ut non libero
-					</li>
-					<li>
-						Consecte adiping elit
-					</li>
-				</ul>
 				<div class="pricing-footer">
-					<p>
-						 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero magna psum olor .
-					</p>
-					<a href="javascript:;" class="btn yellow-crusta">
-					Sign Up
-					</a>
+					<p> Access to ALL videos without ANY ads.</p>
 				</div>
 			</div>
 		</div>

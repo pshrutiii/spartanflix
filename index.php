@@ -17,7 +17,7 @@
                     have prospective buyers directly contact you for copyright permissions.
                     How do <strong>YOU</strong> identify yourself? </p>
                 
-                <a href="services.php" class="btn btn-primary btn-xl sr-button">Get Started</a>
+                <a href="services.php" class="btn coloredBtn btn-xl sr-button">Get Started</a>
             </div>
         </div>
     </header>
