@@ -42,6 +42,22 @@
                 </div>
             </form>
         </div>
+		<div>
+			<a href="favorites.php">Favorites</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="history.php">History</a>
+		</div>
+		<div class="btn-group">
+		  <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			Filter
+		  </button>
+		  <div class="dropdown-menu">
+			<a class="dropdown-item" href="#">Movies</a><br/>
+			<a class="dropdown-item" href="#">Series</a> <br/>
+			<a class="dropdown-item" href="#">Documentaries</a>
+			
+		  </div>
+		  <br/><br/><br/>
+		</div>
         <div class="trending-pg">
             <br/>
             <?php if(isset($_COOKIE['backup'])){
