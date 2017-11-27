@@ -23,7 +23,9 @@
 						<div class="col-md-2">
 							<div class="thumbnail" style="padding:0px";}>
 								<img class="img-responsive user-photo" src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png">
+								<span>name</span>
 							</div><!-- /thumbnail -->
+							
 						</div><!-- /col-sm-1 -->
 
 						<div class="col-md-10">

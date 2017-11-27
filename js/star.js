@@ -54,6 +54,7 @@ var __slice = [].slice;
       }
       this.options.rating = rating;
       this.syncRating();
+	  document.write(rating);
       return this.$el.trigger('starrr:change', rating);
     };
 

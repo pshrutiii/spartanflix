@@ -28,7 +28,7 @@
 <body>
     <?php 
         include("../includes/nav.html"); 
-        include("img_general.php");
+        include("ads_template.php");
         include("../includes/footer.html"); 
     ?>
 </body>
