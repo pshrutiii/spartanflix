@@ -120,6 +120,15 @@
                             <input id="viewer-register_lastName" name="viewer-register_lastName" class="form-control" type="text" placeholder="Last Name" required>
                             <input id="viewer-register_email"  name="viewer-register_email" class="form-control" type="text" placeholder="E-Mail" required>
                             <input id="viewer-register_password"  name="viewer-register_password" class="form-control" type="password" placeholder="Password" required>
+							<div class="form-group" style="margin-top:10px;">
+									<select class="form-control" id="content_subscription" name="content_subscription" required>
+										<option value=""></option>
+										<option>Beginner (limited)</option>
+										<option>Beginner (unlimited)</option>
+										<option>Pro (limited)</option>
+										<option>Pro (unlimited)</option>
+									</select>
+							</div>  
             			</div>
 		    		    <div class="modal-footer">
                             <div>
@@ -214,6 +223,13 @@
                             <input id="provider-register_lastName" name="provider-register_lastName" class="form-control" type="text" placeholder="Last Name" required>
                             <input id="provider-register_email"  name="provider-register_email" class="form-control" type="text" placeholder="E-Mail" required>
                             <input id="provider-register_password"  name="provider-register_password" class="form-control" type="password" placeholder="Password" required>
+							<div class="form-group" style="margin-top:10px;">
+									<select class="form-control" id="content_subscription" name="ad_subscription" required>
+										<option value=""></option>
+										<option>30 days</option>
+										<option>60 days</option>
+									</select>
+							</div>  
             			</div>
 		    		    <div class="modal-footer">
                             <div>
