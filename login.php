@@ -287,7 +287,6 @@
                             </div>
 				    	    <div>
                                 <button id="admin-login_lost_btn" type="button" class="btn btn-link">Forgot Password?</button>
-                                <button id="admin-login_register_btn" type="button" class="btn btn-link">Register</button>
                             </div>
 				        </div>
                     </form>
@@ -308,36 +307,10 @@
                             </div>
                             <div>
                                 <button id="admin-lost_login_btn" type="button" class="btn btn-link">Login</button>
-                                <button id="admin-lost_register_btn" type="button" class="btn btn-link">Register</button>
                             </div>
 		    		    </div>
                     </form>
-                    <!-- End | Lost Password Form -->
-                    
-                    <!-- Begin | Register Form -->
-                    <form id="admin-register-form" style="display:none;" method="post" action="includes/validate.php">
-            		    <div class="modal-body">
-		    				<div id="admin-div-register-msg">
-                                <div id="admin-icon-register-msg" class="glyphicon glyphicon-chevron-right"></div>
-                                <span id="admin-text-register-msg">Register for an account.</span>
-                            </div>
-		    				<input id="admin-register_firstName" name="admin-register_firstName" class="form-control" type="text" placeholder="First Name" required>
-                            <input id="admin-register_lastName" name="admin-register_lastName" class="form-control" type="text" placeholder="Last Name" required>
-                            <input id="admin-register_email"  name="admin-register_email" class="form-control" type="text" placeholder="E-Mail" required>
-                            <input id="admin-register_password"  name="admin-register_password" class="form-control" type="password" placeholder="Password" required>
-            			</div>
-		    		    <div class="modal-footer">
-                            <div>
-                                <button type="submit" class="btn btn-primary btn-lg btn-block" name="admin-register-submit" value="register">Register</button>
-                            </div>
-                            <div>
-                                <button id="admin-register_login_btn" type="button" class="btn btn-link">Login</button>
-                                <button id="admin-register_lost_btn" type="button" class="btn btn-link">Forgot Password?</button>
-                            </div>
-		    		    </div>
-                    </form>
-                    <!-- End | Register Form -->
-                    
+                    <!-- End | Lost Password Form -->                   
                 </div>
                 <!-- End # DIV Form http://bootsnipp.com/snippets/featured/modal-login-with-jquery-effects-->
 			</div>

@@ -8,7 +8,7 @@
             while ($row = pg_fetch_row($result_img)) {
                 echo '<img src="'.$row[3].'" class="img-rounded" width="70%" height="auto"/>';
                 echo '<br/><br/>';
-                //echo '<a href="#" class="btn btn-success btn-l sr-button "><i class="fa fa-envelope-o" aria-hidden="true"></i> Message</a> &nbsp&nbsp&nbsp&nbsp';
+                echo '<a href="#" class="btn btn-success btn-l sr-button "><i class="fa fa-envelope-o" aria-hidden="true"></i> Favorites</a> &nbsp&nbsp&nbsp&nbsp';
                 //echo '<a href="#" class="btn coloredBtn btn-l sr-button "><i class="fa fa-shopping-cart" aria-hidden="true"></i> ORder</a>';
                 echo '<p class="" style="padding-top: 2%;">'. $row[4]. '</p>';
             }
