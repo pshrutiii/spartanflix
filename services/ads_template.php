@@ -1,9 +1,9 @@
-<link href="../temp.css" rel="stylesheet">  
 <div class="container padding-10">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 text-center">
-            <h2 class="section-heading">Like what you see?</h2>
-            <hr class="primary">
+	<div class="text-center">
+		<h2 class="section-heading">Like what you see?</h2>
+		<hr class="primary">
+		<div class="row">
+			<div class="col-md-9">
             <?php 
             while ($row = pg_fetch_row($result_img)) {
                 echo '<img src="'.$row[3].'" class="img-rounded" width="70%" height="auto"/>';
@@ -13,10 +13,14 @@
                 echo '<p class="" style="padding-top: 2%;">'. $row[4]. '</p>';
             }
             ?>
+			</div>
+			<div class="col-md-3" >
+                <img src="//i.imgur.com/dg0bTux.jpg" class="img-rounded" width="100%" height="auto"/>
+			</div>
         </div>
     </div>
 	<div class="row">
-        <div class="col-md-6 col-md-offset-3">
+        <div class="col-md-9">
             <div class="panel panel-info">
                 <div class="panel-body">
 					<form class="comment-form" method="post" action="">
