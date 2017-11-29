@@ -4,7 +4,7 @@
 	<link href="css/form.css" rel="stylesheet">
 </head>
 <body>
-	<?php include("includes/nav.html"); ?>
+	<?php include("includes/nav2.html"); ?>
     <div class="container padding-10">
         <div class="row">
             <div class="col-lg-12 text-center">
@@ -62,7 +62,7 @@
                 <div id="viewer-div-forms">
                 
                     <!-- Begin # Login Form -->
-                    <form id="viewer-login-form" method="post" action="page.php">
+                    <form id="viewer-login-form">
 		                <div class="modal-body">
                             <div id="viewer-div-login-msg">
                                 <div id="viewer-icon-login-msg" class="glyphicon glyphicon-chevron-right"></div>
@@ -78,7 +78,7 @@
         		    	</div>
 				        <div class="modal-footer">
                             <div>
-                                <button type="submit" class="btn btn-primary btn-lg btn-block" name="viewer-login-submit" value="login">Login</button>
+                                <button type="submit" class="btn btn-primary btn-lg btn-block" name="viewer-login-submit" id="viewer-login-submit" value="login">Login</button>
                             </div>
 				    	    <div>
                                 <button id="viewer-login_lost_btn" type="button" class="btn btn-link">Forgot Password?</button>
@@ -110,7 +110,7 @@
                     <!-- End | Lost Password Form -->
                     
                     <!-- Begin | Register Form -->
-                    <form id="viewer-register-form" style="display:none;" method="post" action="includes/validate.php">
+                    <form id="viewer-register-form" style="display:none;">
             		    <div class="modal-body">
 		    				<div id="viewer-div-register-msg">
                                 <div id="viewer-icon-register-msg" class="glyphicon glyphicon-chevron-right"></div>
@@ -123,16 +123,16 @@
 							<div class="form-group" style="margin-top:10px;">
 									<select class="form-control" id="content_subscription" name="content_subscription" required>
 										<option value=""></option>
-										<option>Beginner (limited)</option>
-										<option>Beginner (unlimited)</option>
-										<option>Pro (limited)</option>
-										<option>Pro (unlimited)</option>
+										<option value="1">Beginner (limited)</option>
+										<option value="2">Beginner (unlimited)</option>
+										<option value = "3">Pro (limited)</option>
+										<option value= "4">Pro (unlimited)</option>
 									</select>
 							</div>  
             			</div>
 		    		    <div class="modal-footer">
                             <div>
-                                <button type="submit" class="btn btn-primary btn-lg btn-block" name="viewer-register-submit" value="register">Register</button>
+                                <button type="submit" class="btn btn-primary btn-lg btn-block" name="viewer-register-submit" id="viewer-register-submit" value="register">Register</button>
                             </div>
                             <div>
                                 <button id="viewer-register_login_btn" type="button" class="btn btn-link">Login</button>
@@ -318,5 +318,7 @@
 	</div>
     <!-- END # ADMIN MODAL LOGIN -->
     <?php include("includes/footer.html"); ?>
+	<script type="text/javascript" src="js/viewerLoginScript.js"></script>
+	<script type="text/javascript" src="js/viewerSignUp.js"></script>
 </body>
 </html>
