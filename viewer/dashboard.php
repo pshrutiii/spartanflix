@@ -72,24 +72,8 @@ $server = "ec2-54-163-251-104.compute-1.amazonaws.com";
 							</div>
 						</div>
 						<br/>
-						<div class="row no-gutter popup-gallery">
-							<?php 
-							if (pg_numrows($result_img) > 0) {
-								while ($row = pg_fetch_row($result_img)) {
-									echo '<div class="col-md-3 col-sm-3">';
-									$imageName = "IMG_". $row[0];
-									$image_url = $row[2];
-									echo '<a href="'.$image_url.'" class="portfolio-box">';
-									echo '<img src="'.$row[3].'" class="img-responsive " alt="">';
-									echo '<div class="portfolio-box-caption">';
-									echo '<div class="portfolio-box-caption-content">';
-									echo '<div class="project-category text-faded">'.$imageName.'</div>';
-									echo '<div class="project-name">'.$row[1].'</div>';
-									echo '</div></div></a></div>';
-								}
-							}
-							?>
-							
+						<div class="row no-gutter popup-gallery" id="dashboard-tabs">
+							<!--Being populated by getData.js-->
 						</div>
 					</div>
 					<div role="tabpanel" class="tab-pane" id="favorites">
@@ -143,7 +127,7 @@ $server = "ec2-54-163-251-104.compute-1.amazonaws.com";
 					</div>
 					<div role="tabpanel" class="tab-pane" id="history">
 					
-					
+					<p id="result"> </p>
 					
 					
 					</div>
@@ -156,23 +140,22 @@ $server = "ec2-54-163-251-104.compute-1.amazonaws.com";
 	
 	<script>
 	
-	$(document).ready(function(){
-		var readSessionData = sessionStorage.getItem("viewerInfo");
-		var output = JSON.parse(readSessionData);
-		document.getElementById("username").innerHTML = output["firstName"]+ "!";
-		
-		
-		$('.search-panel .dropdown-menu').find('a').click(function(e) {
-			e.preventDefault();
-			var param = $(this).attr("href").replace("#","");
-			var concept = $(this).text();
-			$('.search-panel span#search_concept').text(concept);
-			$('.input-group #search_param').val(param);
-		});		
-	});
-	
-	
-</script>
+		$(document).ready(function(){
+			var readSessionData = sessionStorage.getItem("viewerInfo");
+			var output = JSON.parse(readSessionData);
+			document.getElementById("username").innerHTML = output["firstName"]+ "!";
+			
+			
+			$('.search-panel .dropdown-menu').find('a').click(function(e) {
+				e.preventDefault();
+				var param = $(this).attr("href").replace("#","");
+				var concept = $(this).text();
+				$('.search-panel span#search_concept').text(concept);
+				$('.input-group #search_param').val(param);
+			});		
+		});
+	</script>
+	<script src="../js/getData.js"></script>
 
 </body>
 </html>
