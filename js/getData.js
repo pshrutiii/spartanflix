@@ -8,6 +8,9 @@ function getData(url){
 			for (var favorite in json.favoriteList) {
 				$("#favorites-tab").append("<tr><td>" + json.favoriteList[favorite]["year"] +"</td><td>" + json.favoriteList[favorite]["title"] +"</td><td>" + json.favoriteList[favorite]["director"] +"</td><td>" + json.favoriteList[favorite]["type"] +"</td><td>" + json.favoriteList[favorite]["rating"] +"</td></tr>");
 			}
+			for (var history in json.historyList) {
+				$("#history-tab").append("<tr><td>" + json.historyList[history]["title"] +"</td><td>" + json.historyList[history]["director"] +"</td><td>" + json.historyList[history]["type"] +"</td><td>" + json.historyList[history]["year"] +"</td><td>" + json.historyList[history]["rating"] +"</td><td><a href='#pencil'><i class='icon-pencil'></i></a><a href='#myModal' role='button' data-toggle='modal'><i class='icon-remove'></i></a></td></tr>");
+			}
 		})
 		.fail(function( jqxhr, textStatus, error ) {
 			var err = textStatus + ", " + error;

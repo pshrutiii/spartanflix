@@ -37,7 +37,7 @@
 			<div class="col-lg-3 col-md-3 text-center">
             	<div class="service-box">
             		<a href="#" data-toggle="modal" data-target="#contentProvider-login-modal">
-						<i class="fa fa-4x fa-upload text-primary sr-icons"></i>
+						<i class="fa fa-4x fa-cloud-upload text-primary sr-icons"></i>
             			<h3>Content Providers</h3> 
             		</a>
 		        	<p class="text-muted">Want to show your content on our site, please create an account and get started. it's that easy!</p>

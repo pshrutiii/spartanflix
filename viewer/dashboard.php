@@ -87,8 +87,68 @@
 						</div>
 					</div>
 					<div role="tabpanel" class="tab-pane" id="history">
+					<br/>
+					<div class="container">
+							<div class="row">    
+								<div class="col-xs-8 col-xs-offset-2">
+									<div class="input-group">
+										<div class="input-group-btn search-panel">
+											<button type="button" class="btn coloredBtn dropdown-toggle" data-toggle="dropdown" style="border-radius:4px;">
+												<span id="search_concept">Filter by</span> <span class="caret"></span>
+											</button>
+											<ul class="dropdown-menu" role="menu">
+											  <li><a href="#contains">Movies</a></li>
+											  <li><a href="#its_equal">Documentaries</a></li>
+											  <li><a href="#greather_than">Series</a></li>
+											</ul>
+										</div>
+										<input type="hidden" name="search_param" value="all" id="search_param">         
+										<input type="text" class="form-control" name="x" placeholder="Search term...">
+										<span class="input-group-btn">
+											<button class="btn coloredBtn" type="button" style="border-radius:0px; padding:10px;"><span class="glyphicon glyphicon-search"></span></button>
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					<div class="well" style="max-width: 90%; margin:2% 6%;">
+						<table class="table">
+						  <thead>
+							<tr>
+							  <th>Title</th>
+							  <th>Director</th>
+							  <th>Year</th>
+							  <th>Type</th>
+							  <th>Rating</th>
+							  <th style="width: 36px;"></th>
+							</tr>
+						  </thead>
+						  <tbody id="history-tab">
+							<!--populated by getData.js-->
+						  </tbody>
+						</table>
+					</div>
+					<ul class="pagination">
+						<li class="page-item"><a class="page-link" href="#">Previous</a></li>
+						<li class="page-item"><a class="page-link" href="#">1</a></li>
+						<li class="page-item"><a class="page-link" href="#">2</a></li>
+						<li class="page-item"><a class="page-link" href="#">3</a></li>
+						<li class="page-item"><a class="page-link" href="#">Next</a></li>
+					</ul>
+					<div class="modal small hide fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+							<h3 id="myModalLabel">Delete Confirmation</h3>
+						</div>
+						<div class="modal-body">
+							<p class="error-text">Are you sure you want to delete the user?</p>
+						</div>
+						<div class="modal-footer">
+							<button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+							<button class="btn btn-danger" data-dismiss="modal">Delete</button>
+						</div>
+					</div>
 					
-					<p id="result"> </p>
 					
 					
 					</div>
