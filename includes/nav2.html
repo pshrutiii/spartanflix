@@ -9,17 +9,22 @@
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
-        <div>
+        <div class="right-nav-items">
                   
             <ul class="nav navbar-nav navbar-right">
-                <li>
-                    <a class="page-scroll" href="/about-us.php">About</a>
-                </li>
+                <li class="dropdown">
+					<a class="dropdown-toggle" data-toggle="dropdown" href="#">Settings
+					<span class="caret"></span></a>
+					<ul class="dropdown-menu">
+					  <li><a href="#">Profile</a></li>
+					  <li><a href="#">Subscription</a></li>
+					</ul>
+				  </li>
                 <!--li>
                     <a class="page-scroll" href="/services/dashboard.php">Dashboard</a>
                 </li-->
 				<li>
-                    <a class="page-scroll" href="../index.php">Logout</a>
+                    <a href="../index.php" id="logout-btn">Logout</a>
                 </li>
             </ul>
         </div>

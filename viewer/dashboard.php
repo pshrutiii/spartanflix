@@ -57,9 +57,9 @@ $server = "ec2-54-163-251-104.compute-1.amazonaws.com";
 												<span id="search_concept">Filter by</span> <span class="caret"></span>
 											</button>
 											<ul class="dropdown-menu" role="menu">
-											  <li><a href="#movies">Movies</a></li>
-											  <li><a href="#documentaries">Documentaries</a></li>
-											  <li><a href="#series">Series</a></li>
+											  <li><a href="#contains">Movies</a></li>
+											  <li><a href="#its_equal">Documentaries</a></li>
+											  <li><a href="#greather_than">Series</a></li>
 											</ul>
 										</div>
 										<input type="hidden" name="search_param" value="all" id="search_param">         
