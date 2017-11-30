@@ -1,29 +1,6 @@
 <html>
 <head>
-<?php include("../includes/header.html"); 
-
-$server = "ec2-54-163-251-104.compute-1.amazonaws.com";
-    $postgres_user="fbajvjuqmooruz";
-    $postgres_pass="4yqUTIXm-AV6wWFx92kIXK7Meg";
-    $db="d6le6mjfm6t4kk";
-    $conn = pg_connect("host=$server port=5432 dbname=$db user=$postgres_user password=$postgres_pass");
-    if (!$conn) {
-      echo "A connection error occurred.\n";
-      exit;
-    }
-    if(isset($_GET['search-submit'])){
-        $value=$_GET['search_value'];
-        $sql = "SELECT * FROM users WHERE firstname LIKE '%".$value."%' 
-                OR lastname LIKE '%".$value."%' OR email LIKE '%".$value."%'
-                OR homephone LIKE '%".$value."%' OR cellphone LIKE '%".$value."%';";
-        $result = pg_query($conn, $sql);
-    }
-    $sql_img = "SELECT * FROM products;";
-    $result_img = pg_query($conn, $sql_img);
-
-
-
-?>
+<?php include("../includes/header.html"); ?>
 <link href="../css/favFilter.css" rel="stylesheet">
 </head>
 <body>
@@ -94,31 +71,15 @@ $server = "ec2-54-163-251-104.compute-1.amazonaws.com";
 									<table class="table table-hover" id="dev-table">
 										<thead>
 											<tr>
-												<th>#</th>
+												<th>Year</th>
 												<th>Title</th>
 												<th>Director</th>
-												<th>Year</th>
+												<th>Type</th>
+												<th>Rating</th>
 											</tr>
 										</thead>
-										<tbody>
-											<tr>
-												<td>1</td>
-												<td>Kilgore</td>
-												<td>Trout</td>
-												<td>kilgore</td>
-											</tr>
-											<tr>
-												<td>2</td>
-												<td>Bob</td>
-												<td>Loblaw</td>
-												<td>boblahblah</td>
-											</tr>
-											<tr>
-												<td>3</td>
-												<td>Holden</td>
-												<td>Caulfield</td>
-												<td>penceyreject</td>
-											</tr>
+										<tbody id="favorites-tab">
+											<!--populated by getData.js-->
 										</tbody>
 									</table>
 								</div>

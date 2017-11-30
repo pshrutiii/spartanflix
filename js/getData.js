@@ -2,9 +2,11 @@ function getData(url){
 	 
 	$.getJSON( url, { format: "json"} )
 		.done(function( json ) {
-			console.log( "JSON Data: " + json.contentList[ 1 ].director );
 			for (var content in json.contentList) {
-				$("#dashboard-tabs").append("<div class='col-md-3 col-sm-3' ><a href='#page-URL' class='portfolio-box'><img src='#img-URL' class='img-responsive ' alt=''><div class='portfolio-box-caption'><div class='portfolio-box-caption-content'><div class='project-name'>" + json.contentList[content]["title"] + "</div><div class='project-category text-faded'>" + json.contentList[content]["director"] + "</div></div></div></a></div>");
+				$("#dashboard-tabs").append("<div class='col-md-3 col-sm-3' ><a href='#page-URL' class='portfolio-box'><img src='#img-URL' class='img-responsive ' alt=''><div class='portfolio-box-caption'><div class='portfolio-box-caption-content'><div class='project-name'>" + json.contentList[content]["title"] + "</div><div class='project-category text-faded'>" + json.contentList[content]["type"] + "</div></div></div></a></div>");
+			}
+			for (var favorite in json.favoriteList) {
+				$("#favorites-tab").append("<tr><td>" + json.favoriteList[favorite]["year"] +"</td><td>" + json.favoriteList[favorite]["title"] +"</td><td>" + json.favoriteList[favorite]["director"] +"</td><td>" + json.favoriteList[favorite]["type"] +"</td><td>" + json.favoriteList[favorite]["rating"] +"</td></tr>");
 			}
 		})
 		.fail(function( jqxhr, textStatus, error ) {
@@ -18,7 +20,8 @@ $(document).ready(function(){
 	var output = JSON.parse(readSessionData);
 	viewerId = output["id"];
 	API_url = "http://52.52.157.178:3000/viewer/allHistoryAndFavorite?viewerId=" + viewerId;
-	getData(API_url);
+	test_url = "http://52.52.157.178:3000/viewer/allHistoryAndFavorite?viewerId=1"
+	getData(test_url);
 });
 
 
