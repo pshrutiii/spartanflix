@@ -157,7 +157,7 @@ $server = "ec2-54-163-251-104.compute-1.amazonaws.com";
 	<script>
 	
 	$(document).ready(function(){
-		var readSessionData = sessionStorage.getItem("userInfo");
+		var readSessionData = sessionStorage.getItem("viewerInfo");
 		var output = JSON.parse(readSessionData);
 		document.getElementById("username").innerHTML = output["firstName"]+ "!";
 		

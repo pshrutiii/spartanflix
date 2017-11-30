@@ -15,7 +15,7 @@
     </div>
     <div class="container">
         <div class="row">
-			<div class="col-lg-4 col-md-4 text-center">
+			<div class="col-lg-3 col-md-3 text-center">
                 <div class="service-box">
                     <!--a href="services/gallery.php"-->
 					<a href="#" data-toggle="modal" data-target="#viewer-login-modal">
@@ -25,16 +25,25 @@
                     <p class="text-muted">Join the world of shows in one place more than ever before at a cheap price.</p>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-4 text-center">
+            <div class="col-lg-3 col-md-3 text-center">
             	<div class="service-box">
-            		<a href="#" data-toggle="modal" data-target="#provider-login-modal">
+            		<a href="#" data-toggle="modal" data-target="#adProvider-login-modal">
 						<i class="fa fa-4x fa-upload text-primary sr-icons"></i>
-            			<h3>Ad/Content Providers</h3> 
+            			<h3>Ad Providers</h3> 
             		</a>
-		        	<p class="text-muted">Would you like to show your ads or content through us, please create an account and get started.</p>
+		        	<p class="text-muted">Would you like to show your ads through us, please create an account and get started.</p>
 		        </div>
             </div>
-            <div class="col-lg-4 col-md-4 text-center">
+			<div class="col-lg-3 col-md-3 text-center">
+            	<div class="service-box">
+            		<a href="#" data-toggle="modal" data-target="#contentProvider-login-modal">
+						<i class="fa fa-4x fa-upload text-primary sr-icons"></i>
+            			<h3>Content Providers</h3> 
+            		</a>
+		        	<p class="text-muted">Want to show your content on our site, please create an account and get started. it's that easy!</p>
+		        </div>
+            </div>
+            <div class="col-lg-3 col-md-3 text-center">
                 <div class="service-box">
                     <a href="#" data-toggle="modal" data-target="#admin-login-modal">
 	                    <i class="fa fa-4x fa-lock text-primary sr-icons"></i>
@@ -121,7 +130,7 @@
                             <input id="viewer-register_email"  name="viewer-register_email" class="form-control" type="text" placeholder="E-Mail" required>
                             <input id="viewer-register_password"  name="viewer-register_password" class="form-control" type="password" placeholder="Password" required>
 							<div class="form-group" style="margin-top:10px;">
-									<select class="form-control" id="content_subscription" name="content_subscription" required>
+									<select class="form-control" id="viewer_subscription" name="viewer_subscription" required>
 										<option value=""></option>
 										<option value="1">Beginner (limited)</option>
 										<option value="2">Beginner (unlimited)</option>
@@ -143,18 +152,17 @@
                     <!-- End | Register Form -->
                     
                 </div>
-                <!-- End # DIV Form http://bootsnipp.com/snippets/featured/modal-login-with-jquery-effects-->
 			</div>
 		</div>
 	</div>
     <!-- END # VIEWER MODAL LOGIN -->
 	
-	<!-- BEGIN # PROVIDER MODAL LOGIN -->
-<div class="modal fade" id="provider-login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+	<!-- BEGIN # AD PROVIDER MODAL LOGIN -->
+<div class="modal fade" id="adProvider-login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
     	<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header" align="center">
-					<h4>Provider
+					<h4>Ad Provider
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 						<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
 					</button>
@@ -162,17 +170,17 @@
 				</div>
                 
                 <!-- Begin # DIV Form -->
-                <div id="provider-div-forms">
+                <div id="adProvider-div-forms">
                 
                     <!-- Begin # Login Form -->
-                    <form id="provider-login-form" method="post" action="page.php">
+                    <form id="adProvider-login-form" method="post" action="page.php">
 		                <div class="modal-body">
-                            <div id="provider-div-login-msg">
-                                <div id="provider-icon-login-msg" class="glyphicon glyphicon-chevron-right"></div>
-                                <span id="provider-text-login-msg">Login to your account.</span>
+                            <div id="adProvider-div-login-msg">
+                                <div id="adProvider-icon-login-msg" class="glyphicon glyphicon-chevron-right"></div>
+                                <span id="adProvider-text-login-msg">Login to your account.</span>
                             </div>
-				    		<input id="provider-login_user" class="form-control" type="text" placeholder="E-Mail" name="login_user" required>
-				    		<input id="provider-login_pass" class="form-control" type="password" placeholder="Password" name="login_pass" required>
+				    		<input id="adProvider-login_user" class="form-control" type="text" placeholder="E-Mail" name="login_user" required>
+				    		<input id="adProvider-login_pass" class="form-control" type="password" placeholder="Password" name="login_pass" required>
                             <!--div class="checkbox">
                                 <label>
                                     <input type="checkbox"> Remember me
@@ -181,50 +189,50 @@
         		    	</div>
 				        <div class="modal-footer">
                             <div>
-                                <button type="submit" class="btn btn-primary btn-lg btn-block" name="provider-login-submit" value="login">Login</button>
+                                <button type="submit" class="btn btn-primary btn-lg btn-block" name="adProvider-login-submit" value="login">Login</button>
                             </div>
 				    	    <div>
-                                <button id="provider-login_lost_btn" type="button" class="btn btn-link">Forgot Password?</button>
-                                <button id="provider-login_register_btn" type="button" class="btn btn-link">Register</button>
+                                <button id="adProvider-login_lost_btn" type="button" class="btn btn-link">Forgot Password?</button>
+                                <button id="adProvider-login_register_btn" type="button" class="btn btn-link">Register</button>
                             </div>
 				        </div>
                     </form>
                     <!-- End # Login Form -->
                     
                     <!-- Begin | Lost Password Form -->
-                    <form id="provider-lost-form" style="display:none;">
+                    <form id="adProvider-lost-form" style="display:none;">
     	    		    <div class="modal-body">
-		    				<div id="provider-div-lost-msg">
-                                <div id="provider-icon-lost-msg" class="glyphicon glyphicon-chevron-right"></div>
-                                <span id="provider-text-lost-msg">Enter Username</span>
+		    				<div id="adProvider-div-lost-msg">
+                                <div id="adProvider-icon-lost-msg" class="glyphicon glyphicon-chevron-right"></div>
+                                <span id="adProvider-text-lost-msg">Enter Username</span>
                             </div>
-		    				<input id="provider-lost_email" class="form-control" type="text" placeholder="E-Mail" required>
+		    				<input id="adProvider-lost_email" class="form-control" type="text" placeholder="E-Mail" required>
             			</div>
 		    		    <div class="modal-footer">
                             <div>
                                 <button type="submit" class="btn btn-primary btn-lg btn-block">Send</button>
                             </div>
                             <div>
-                                <button id="provider-lost_login_btn" type="button" class="btn btn-link">Login</button>
-                                <button id="provider-lost_register_btn" type="button" class="btn btn-link">Register</button>
+                                <button id="adProvider-lost_login_btn" type="button" class="btn btn-link">Login</button>
+                                <button id="adProvider-lost_register_btn" type="button" class="btn btn-link">Register</button>
                             </div>
 		    		    </div>
                     </form>
                     <!-- End | Lost Password Form -->
                     
                     <!-- Begin | Register Form -->
-                    <form id="provider-register-form" style="display:none;" method="post" action="includes/validate.php">
+                    <form id="adProvider-register-form" style="display:none;" method="post" action="includes/validate.php">
             		    <div class="modal-body">
-		    				<div id="provider-div-register-msg">
-                                <div id="provider-icon-register-msg" class="glyphicon glyphicon-chevron-right"></div>
-                                <span id="provider-text-register-msg">Register for an account.</span>
+		    				<div id="adProvider-div-register-msg">
+                                <div id="adProvider-icon-register-msg" class="glyphicon glyphicon-chevron-right"></div>
+                                <span id="adProvider-text-register-msg">Register for an account.</span>
                             </div>
-		    				<input id="provider-register_firstName" name="provider-register_firstName" class="form-control" type="text" placeholder="First Name" required>
-                            <input id="provider-register_lastName" name="provider-register_lastName" class="form-control" type="text" placeholder="Last Name" required>
-                            <input id="provider-register_email"  name="provider-register_email" class="form-control" type="text" placeholder="E-Mail" required>
-                            <input id="provider-register_password"  name="provider-register_password" class="form-control" type="password" placeholder="Password" required>
+		    				<input id="adProvider-register_firstName" name="adProvider-register_firstName" class="form-control" type="text" placeholder="First Name" required>
+                            <input id="adProvider-register_lastName" name="adProvider-register_lastName" class="form-control" type="text" placeholder="Last Name" required>
+                            <input id="adProvider-register_email"  name="adProvider-register_email" class="form-control" type="text" placeholder="E-Mail" required>
+                            <input id="adProvider-register_password"  name="adProvider-register_password" class="form-control" type="password" placeholder="Password" required>
 							<div class="form-group" style="margin-top:10px;">
-									<select class="form-control" id="content_subscription" name="ad_subscription" required>
+									<select class="form-control" id="ad_subscription" name="ad_subscription" required>
 										<option value=""></option>
 										<option>30 days</option>
 										<option>60 days</option>
@@ -233,23 +241,114 @@
             			</div>
 		    		    <div class="modal-footer">
                             <div>
-                                <button type="submit" class="btn btn-primary btn-lg btn-block" name="provider-register-submit" value="register">Register</button>
+                                <button type="submit" class="btn btn-primary btn-lg btn-block" name="adProvider-register-submit" value="register">Register</button>
                             </div>
                             <div>
-                                <button id="provider-register_login_btn" type="button" class="btn btn-link">Login</button>
-                                <button id="provider-register_lost_btn" type="button" class="btn btn-link">Forgot Password?</button>
+                                <button id="adProvider-register_login_btn" type="button" class="btn btn-link">Login</button>
+                                <button id="adProvider-register_lost_btn" type="button" class="btn btn-link">Forgot Password?</button>
                             </div>
 		    		    </div>
                     </form>
                     <!-- End | Register Form -->
                     
                 </div>
-                <!-- End # DIV Form http://bootsnipp.com/snippets/featured/modal-login-with-jquery-effects-->
 			</div>
 		</div>
 	</div>
-    <!-- END # PROVIDER MODAL LOGIN -->
+    <!-- END # AD PROVIDER MODAL LOGIN -->
 	
+	<!-- BEGIN # CONTENT PROVIDER MODAL LOGIN -->
+	<div class="modal fade" id="contentProvider-login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+    	<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header" align="center">
+					<h4>Content Provider
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+					</button>
+					</h4>
+				</div>
+                
+                <!-- Begin # DIV Form -->
+                <div id="contentProvider-div-forms">
+                
+                    <!-- Begin # Login Form -->
+                    <form id="contentProvider-login-form" method="post" action="page.php">
+		                <div class="modal-body">
+                            <div id="contentProvider-div-login-msg">
+                                <div id="contentProvider-icon-login-msg" class="glyphicon glyphicon-chevron-right"></div>
+                                <span id="contentProvider-text-login-msg">Login to your account.</span>
+                            </div>
+				    		<input id="contentProvider-login_user" class="form-control" type="text" placeholder="E-Mail" name="login_user" required>
+				    		<input id="contentProvider-login_pass" class="form-control" type="password" placeholder="Password" name="login_pass" required>
+                            <!--div class="checkbox">
+                                <label>
+                                    <input type="checkbox"> Remember me
+                                </label>
+                            </div-->
+        		    	</div>
+				        <div class="modal-footer">
+                            <div>
+                                <button type="submit" class="btn btn-primary btn-lg btn-block" name="contentProvider-login-submit" value="login">Login</button>
+                            </div>
+				    	    <div>
+                                <button id="contentProvider-login_lost_btn" type="button" class="btn btn-link">Forgot Password?</button>
+                                <button id="contentProvider-login_register_btn" type="button" class="btn btn-link">Register</button>
+                            </div>
+				        </div>
+                    </form>
+                    <!-- End # Login Form -->
+                    
+                    <!-- Begin | Lost Password Form -->
+                    <form id="contentProvider-lost-form" style="display:none;">
+    	    		    <div class="modal-body">
+		    				<div id="contentProvider-div-lost-msg">
+                                <div id="contentProvider-icon-lost-msg" class="glyphicon glyphicon-chevron-right"></div>
+                                <span id="contentProvider-text-lost-msg">Enter Username</span>
+                            </div>
+		    				<input id="contentProvider-lost_email" class="form-control" type="text" placeholder="E-Mail" required>
+            			</div>
+		    		    <div class="modal-footer">
+                            <div>
+                                <button type="submit" class="btn btn-primary btn-lg btn-block">Send</button>
+                            </div>
+                            <div>
+                                <button id="contentProvider-lost_login_btn" type="button" class="btn btn-link">Login</button>
+                                <button id="contentProvider-lost_register_btn" type="button" class="btn btn-link">Register</button>
+                            </div>
+		    		    </div>
+                    </form>
+                    <!-- End | Lost Password Form -->
+                    
+                    <!-- Begin | Register Form -->
+                    <form id="contentProvider-register-form" style="display:none;" method="post" action="includes/validate.php">
+            		    <div class="modal-body">
+		    				<div id="contentProvider-div-register-msg">
+                                <div id="contentProvider-icon-register-msg" class="glyphicon glyphicon-chevron-right"></div>
+                                <span id="contentProvider-text-register-msg">Register for an account.</span>
+                            </div>
+		    				<input id="contentProvider-register_firstName" name="contentProvider-register_firstName" class="form-control" type="text" placeholder="First Name" required>
+                            <input id="contentProvider-register_lastName" name="contentProvider-register_lastName" class="form-control" type="text" placeholder="Last Name" required>
+                            <input id="contentProvider-register_email"  name="contentProvider-register_email" class="form-control" type="text" placeholder="E-Mail" required>
+                            <input id="contentProvider-register_password"  name="contentProvider-register_password" class="form-control" type="password" placeholder="Password" required>  
+            			</div>
+		    		    <div class="modal-footer">
+                            <div>
+                                <button type="submit" class="btn btn-primary btn-lg btn-block" name="contentProvider-register-submit" value="register">Register</button>
+                            </div>
+                            <div>
+                                <button id="contentProvider-register_login_btn" type="button" class="btn btn-link">Login</button>
+                                <button id="contentProvider-register_lost_btn" type="button" class="btn btn-link">Forgot Password?</button>
+                            </div>
+		    		    </div>
+                    </form>
+                    <!-- End | Register Form -->
+                    
+                </div>
+			</div>
+		</div>
+	</div>
+    <!-- END # CONTENT PROVIDER MODAL LOGIN -->
 	
 	<!-- BEGIN # ADMIN MODAL LOGIN -->
 <div class="modal fade" id="admin-login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
@@ -312,13 +411,12 @@
                     </form>
                     <!-- End | Lost Password Form -->                   
                 </div>
-                <!-- End # DIV Form http://bootsnipp.com/snippets/featured/modal-login-with-jquery-effects-->
 			</div>
 		</div>
 	</div>
     <!-- END # ADMIN MODAL LOGIN -->
     <?php include("includes/footer.html"); ?>
-	<script type="text/javascript" src="js/viewerLoginScript.js"></script>
-	<script type="text/javascript" src="js/viewerSignUp.js"></script>
+	<script type="text/javascript" src="js/allFourLogin.js"></script>
+	<script type="text/javascript" src="js/allFourRegister.js"></script>
 </body>
 </html>

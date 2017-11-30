@@ -16,10 +16,15 @@ $(function() {
     var $viewerFormRegister = $('#viewer-register-form');
     var $viewerDivForms = $('#viewer-div-forms');
 	
-	var $providerFormLogin = $('#provider-login-form');
-    var $providerFormLost = $('#provider-lost-form');
-    var $providerFormRegister = $('#provider-register-form');
-	var $providerDivForms = $('#provider-div-forms');
+	var $contentProviderFormLogin = $('#contentProvider-login-form');
+    var $contentProviderFormLost = $('#contentProvider-lost-form');
+    var $contentProviderFormRegister = $('#contentProvider-register-form');
+	var $contentProviderDivForms = $('#contentProvider-div-forms');
+	
+	var $adProviderFormLogin = $('#adProvider-login-form');
+    var $adProviderFormLost = $('#adProvider-lost-form');
+    var $adProviderFormRegister = $('#adProvider-register-form');
+	var $adProviderDivForms = $('#adProvider-div-forms');
 	
 	var $adminFormLogin = $('#admin-login-form');
     var $adminFormLost = $('#admin-lost-form');
@@ -75,12 +80,20 @@ $(function() {
     $('#viewer-lost_register_btn').click( function () { modalAnimate($viewerFormLost, $viewerFormRegister, $viewerDivForms); });
     $('#viewer-register_lost_btn').click( function () { modalAnimate($viewerFormRegister, $viewerFormLost, $viewerDivForms); });   
 	
-	$('#provider-login_register_btn').click( function () { modalAnimate($providerFormLogin, $providerFormRegister, $providerDivForms);});
-    $('#provider-register_login_btn').click( function () { modalAnimate($providerFormRegister, $providerFormLogin, $providerDivForms); });
-    $('#provider-login_lost_btn').click( function () { modalAnimate($providerFormLogin, $providerFormLost, $providerDivForms); });
-    $('#provider-lost_login_btn').click( function () { modalAnimate($providerFormLost, $providerFormLogin, $providerDivForms); });
-    $('#provider-lost_register_btn').click( function () { modalAnimate($providerFormLost, $providerFormRegister, $providerDivForms); });
-    $('#provider-register_lost_btn').click( function () { modalAnimate($formRegister, $providerFormLost, $providerDivForms); });
+	$('#contentProvider-login_register_btn').click( function () { modalAnimate($contentProviderFormLogin, $contentProviderFormRegister, $contentProviderDivForms);});
+    $('#contentProvider-register_login_btn').click( function () { modalAnimate($contentProviderFormRegister, $contentProviderFormLogin, $contentProviderDivForms); });
+    $('#contentProvider-login_lost_btn').click( function () { modalAnimate($contentProviderFormLogin, $contentProviderFormLost, $contentProviderDivForms); });
+    $('#contentProvider-lost_login_btn').click( function () { modalAnimate($contentProviderFormLost, $contentProviderFormLogin, $contentProviderDivForms); });
+    $('#contentProvider-lost_register_btn').click( function () { modalAnimate($contentProviderFormLost, $contentProviderFormRegister, $contentProviderDivForms); });
+    $('#contentProvider-register_lost_btn').click( function () { modalAnimate($formRegister, $contentProviderFormLost, $contentProviderDivForms); });
+	
+	$('#adProvider-login_register_btn').click( function () { modalAnimate($adProviderFormLogin, $adProviderFormRegister, $adProviderDivForms);});
+    $('#adProvider-register_login_btn').click( function () { modalAnimate($adProviderFormRegister, $adProviderFormLogin, $adProviderDivForms); });
+    $('#adProvider-login_lost_btn').click( function () { modalAnimate($adProviderFormLogin, $adProviderFormLost, $adProviderDivForms); });
+    $('#adProvider-lost_login_btn').click( function () { modalAnimate($adProviderFormLost, $adProviderFormLogin, $adProviderDivForms); });
+    $('#adProvider-lost_register_btn').click( function () { modalAnimate($adProviderFormLost, $adProviderFormRegister, $adProviderDivForms); });
+    $('#adProvider-register_lost_btn').click( function () { modalAnimate($formRegister, $adProviderFormLost, $adProviderDivForms); });
+	
 	
 	$('#admin-login_register_btn').click( function () { modalAnimate($adminFormLogin, $adminFormRegister, $adminDivForms); });
     $('#admin-register_login_btn').click( function () { modalAnimate($adminFormRegister, $adminFormLogin,$adminDivForms); });
