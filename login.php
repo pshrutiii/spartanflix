@@ -4,7 +4,7 @@
 	<link href="css/form.css" rel="stylesheet">
 </head>
 <body>
-	<?php include("includes/nav2.html"); ?>
+	<?php include("includes/nav.html"); ?>
     <div class="container padding-10">
         <div class="row">
             <div class="col-lg-12 text-center">
