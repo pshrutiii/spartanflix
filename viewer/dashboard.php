@@ -185,7 +185,7 @@
 			
 		});
 	</script>
-	<script src="../js/getData.js"></script>
+	<script src="../js/viewerData.js"></script>
 
 </body>
 </html>

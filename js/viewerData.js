@@ -48,23 +48,24 @@ $(document).ready(function(){
 	
 });
 
-//Remove items from history list	
+//Remove items from history list
+	
 	$(document).on('click', '.history-delete-btn', function(){ 
 		var tr = $(this).closest('tr');
-		console.log($("#history-title").text());
 		
-		var $hTitle = $('#history-title').text();
-		var $hDirector = $('#history-director').text();
-		var $hYear = $('#history-year').text();
-		var $hType= $('#history-type').text();
-		var $hRating= $('#history-rating').text();
+		var $hTitle = tr.find('#history-title').text();
+		var $hDirector = tr.find('#history-director').text();
+		var $hYear = tr.find('#history-year').text();
+		var $hType= tr.find('#history-type').text();
+		var $hRating= tr.find('#history-rating').text();
 		var postData = {title: $hTitle,director: $hDirector,year: $hYear,type: $hType,rating: $hRating};
+		
+		//console.log(postData);
 		
 		//url = "http://52.52.157.178:3000/viewer/signup";
 		//removeData(postData, url);
 		
-		
-		
+		// UI effects on delete
 		tr.fadeOut(200, function(){
 			tr.remove();
 		});
