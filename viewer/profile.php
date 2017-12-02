@@ -7,7 +7,7 @@
 }
 </style>
 <body>
-    <?php include("../includes/nav2.html"); ?>
+    <?php include("../includes/nav3.html"); ?>
 	
 	<div class="container padding-10" style="margin-left: 30%;">
 		<div class="row">

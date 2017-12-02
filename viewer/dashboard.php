@@ -29,14 +29,14 @@
 							<div class="row">    
 								<div class="col-xs-8 col-xs-offset-2">
 									<div class="input-group">
-										<div class="input-group-btn search-panel">
+										<div class="input-group-btn dashboard_search-panel">
 											<button type="button" class="btn coloredBtn dropdown-toggle" data-toggle="dropdown" style="border-radius:4px;">
 												<span id="search_concept">Filter by</span> <span class="caret"></span>
 											</button>
 											<ul class="dropdown-menu" role="menu">
-											  <li><a href="#contains">Movies</a></li>
-											  <li><a href="#its_equal">Documentaries</a></li>
-											  <li><a href="#greather_than">Series</a></li>
+											  <li><a href="">Movies</a></li>
+											  <li><a href="">Documentaries</a></li>
+											  <li><a href="">Series</a></li>
 											</ul>
 										</div>
 										<input type="hidden" name="search_param" value="all" id="search_param">         
@@ -92,14 +92,14 @@
 							<div class="row">    
 								<div class="col-xs-8 col-xs-offset-2">
 									<div class="input-group">
-										<div class="input-group-btn search-panel">
+										<div class="input-group-btn history_search-panel">
 											<button type="button" class="btn coloredBtn dropdown-toggle" data-toggle="dropdown" style="border-radius:4px;">
 												<span id="search_concept">Filter by</span> <span class="caret"></span>
 											</button>
 											<ul class="dropdown-menu" role="menu">
-											  <li><a href="#contains">Movies</a></li>
-											  <li><a href="#its_equal">Documentaries</a></li>
-											  <li><a href="#greather_than">Series</a></li>
+											  <li><a href="">Movies</a></li>
+											  <li><a href="">Documentaries</a></li>
+											  <li><a href="">Series</a></li>
 											</ul>
 										</div>
 										<input type="hidden" name="search_param" value="all" id="search_param">         
@@ -128,13 +128,13 @@
 						  </tbody>
 						</table>
 					</div>
-					<ul class="pagination">
+					<!--ul class="pagination">
 						<li class="page-item"><a class="page-link" href="#">Previous</a></li>
 						<li class="page-item"><a class="page-link" href="#">1</a></li>
 						<li class="page-item"><a class="page-link" href="#">2</a></li>
 						<li class="page-item"><a class="page-link" href="#">3</a></li>
 						<li class="page-item"><a class="page-link" href="#">Next</a></li>
-					</ul>
+					</ul-->
 					<div class="modal small hide fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 						<div class="modal-header">
 							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
@@ -148,9 +148,6 @@
 							<button class="btn btn-danger" data-dismiss="modal">Delete</button>
 						</div>
 					</div>
-					
-					
-					
 					</div>
 				</div>
 			</div>
@@ -166,14 +163,26 @@
 			var output = JSON.parse(readSessionData);
 			document.getElementById("username").innerHTML = output["firstName"]+ "!";
 			
-			
-			$('.search-panel .dropdown-menu').find('a').click(function(e) {
+			//Dashboard - FILTER and search jquery
+			$('.dashboard_search-panel .dropdown-menu').find('a').click(function(e) {
 				e.preventDefault();
 				var param = $(this).attr("href").replace("#","");
 				var concept = $(this).text();
-				$('.search-panel span#search_concept').text(concept);
+				$('.dashboard_search-panel span#search_concept').text(concept);
 				$('.input-group #search_param').val(param);
+				//alert(concept);
 			});		
+			
+			//History - FILTER and search jquery
+			$('.history_search-panel .dropdown-menu').find('a').click(function(e) {
+				e.preventDefault();
+				var param = $(this).attr("href").replace("#","");
+				var concept = $(this).text();
+				$('.history_search-panel span#search_concept').text(concept);
+				$('.input-group #search_param').val(param);
+				//alert(concept);
+			});	
+			
 		});
 	</script>
 	<script src="../js/getData.js"></script>
