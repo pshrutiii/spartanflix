@@ -17,7 +17,6 @@
         <div class="row">
 			<div class="col-lg-3 col-md-3 text-center">
                 <div class="service-box">
-                    <!--a href="services/gallery.php"-->
 					<a href="#" data-toggle="modal" data-target="#viewer-login-modal">
 	                    <i class="fa fa-4x fa-th text-primary sr-icons"></i>
 	                    <h3>Viewer</h3>
@@ -418,5 +417,6 @@
     <?php include("includes/footer.html"); ?>
 	<script type="text/javascript" src="js/allFourLogin.js"></script>
 	<script type="text/javascript" src="js/allFourRegister.js"></script>
+	<script src="../js/loginModal.js"></script>
 </body>
 </html>
