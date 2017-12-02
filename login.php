@@ -90,7 +90,7 @@
                                 <button type="submit" class="btn btn-primary btn-lg btn-block" name="viewer-login-submit" id="viewer-login-submit" value="login">Login</button>
                             </div>
 				    	    <div>
-                                <button id="viewer-login_lost_btn" type="button" class="btn btn-link">Forgot Password?</button>
+                                <!--button id="viewer-login_lost_btn" type="button" class="btn btn-link">Forgot Password?</button-->
                                 <button id="viewer-login_register_btn" type="button" class="btn btn-link">Register</button>
                             </div>
 				        </div>
@@ -145,7 +145,7 @@
                             </div>
                             <div>
                                 <button id="viewer-register_login_btn" type="button" class="btn btn-link">Login</button>
-                                <button id="viewer-register_lost_btn" type="button" class="btn btn-link">Forgot Password?</button>
+                                <!--button id="viewer-register_lost_btn" type="button" class="btn btn-link">Forgot Password?</button-->
                             </div>
 		    		    </div>
                     </form>
@@ -192,7 +192,7 @@
                                 <button type="submit" class="btn btn-primary btn-lg btn-block" name="adProvider-login-submit" value="login">Login</button>
                             </div>
 				    	    <div>
-                                <button id="adProvider-login_lost_btn" type="button" class="btn btn-link">Forgot Password?</button>
+                                <!--button id="adProvider-login_lost_btn" type="button" class="btn btn-link">Forgot Password?</button-->
                                 <button id="adProvider-login_register_btn" type="button" class="btn btn-link">Register</button>
                             </div>
 				        </div>
@@ -245,7 +245,7 @@
                             </div>
                             <div>
                                 <button id="adProvider-register_login_btn" type="button" class="btn btn-link">Login</button>
-                                <button id="adProvider-register_lost_btn" type="button" class="btn btn-link">Forgot Password?</button>
+                                <!--button id="adProvider-register_lost_btn" type="button" class="btn btn-link">Forgot Password?</button-->
                             </div>
 		    		    </div>
                     </form>
@@ -292,7 +292,7 @@
                                 <button type="submit" class="btn btn-primary btn-lg btn-block" name="contentProvider-login-submit" value="login">Login</button>
                             </div>
 				    	    <div>
-                                <button id="contentProvider-login_lost_btn" type="button" class="btn btn-link">Forgot Password?</button>
+                                <!--button id="contentProvider-login_lost_btn" type="button" class="btn btn-link">Forgot Password?</button-->
                                 <button id="contentProvider-login_register_btn" type="button" class="btn btn-link">Register</button>
                             </div>
 				        </div>
@@ -338,7 +338,7 @@
                             </div>
                             <div>
                                 <button id="contentProvider-register_login_btn" type="button" class="btn btn-link">Login</button>
-                                <button id="contentProvider-register_lost_btn" type="button" class="btn btn-link">Forgot Password?</button>
+                                <!--button id="contentProvider-register_lost_btn" type="button" class="btn btn-link">Forgot Password?</button-->
                             </div>
 		    		    </div>
                     </form>
@@ -385,7 +385,7 @@
                                 <button type="submit" class="btn btn-primary btn-lg btn-block" name="admin-login-submit" value="login">Login</button>
                             </div>
 				    	    <div>
-                                <button id="admin-login_lost_btn" type="button" class="btn btn-link">Forgot Password?</button>
+                                <!--button id="admin-login_lost_btn" type="button" class="btn btn-link">Forgot Password?</button-->
                             </div>
 				        </div>
                     </form>
