@@ -33,9 +33,14 @@ function removeData(postData, url){
 
 
 $(document).ready(function(){
-	//TODO: update URL with hardcoded admin ID
-	API_url = "http://52.52.157.178:3000/admin/contents?adminId=" + adminId;
-	//test_url = "http://52.52.157.178:3000/viewer/allHistoryAndFavorite?viewerId=1"
+	var getIP = sessionStorage.getItem("IP");
+	var IP = JSON.parse(getIP);
+	
+	var readSessionData = sessionStorage.getItem("adminInfo");
+	var output = JSON.parse(readSessionData);
+	adminId = output["id"];
+	
+	API_url = IP +"/admin/contents?adminId=" + adminId;
 	getData(API_url);
 });
 

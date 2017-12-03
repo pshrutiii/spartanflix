@@ -42,7 +42,10 @@ $(document).ready(function(){
 	var readSessionData = sessionStorage.getItem("viewerInfo");
 	var output = JSON.parse(readSessionData);
 	viewerId = output["id"];
-	API_url = "http://52.52.157.178:3000/viewer/getViewerContent?viewerId=" + viewerId;
+	var getIP = sessionStorage.getItem("IP");
+	var IP = JSON.parse(getIP);
+	
+	API_url = IP + "/viewer/getViewerContent?viewerId=" + viewerId;
 	getData(API_url);
 	
 });

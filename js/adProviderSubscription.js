@@ -26,7 +26,8 @@ function addDropdowns(selId, variable, json){
 	function updateSubscriptionData(postData, url){
 		$.getJSON( url, { format: "json"} )
 			.done(function( json ) {
-				alert(json['id']);
+				//alert(json['id']);
+				console.log(json);
 			})
 			.fail(function( jqxhr, textStatus, error ) {
 				var err = textStatus + ", " + error;
@@ -40,7 +41,9 @@ function addDropdowns(selId, variable, json){
 		var $adProviderId = output["id"];
 		var $subscriptionId = output["subscriptionId"];
 
-		API_url = "http://52.52.157.178:3000/adProvider/getAllSubscriptions?adProviderId=" + $adProviderId + "&subscriptionId=" + $subscriptionId 
+		var getIP = sessionStorage.getItem("IP");
+		var IP = JSON.parse(getIP);
+		API_url = IP + "/adProvider/getAllSubscriptions?adProviderId=" + $adProviderId + "&subscriptionId=" + $subscriptionId 
 		getSubscriptionData(API_url);
 		
 	});
@@ -51,8 +54,10 @@ function addDropdowns(selId, variable, json){
 		var $adProviderId = output["id"];
 		var $subscriptionId = $( "#change-plan_id option:selected" ).text();
 		var postData = {adProviderId: $adProviderId, subscriptionId: $subscriptionId};
-
-		API_url = "http://52.52.157.178:3000/adProvider/changeSubscription";
+		
+		var getIP = sessionStorage.getItem("IP");
+		var IP = JSON.parse(getIP);
+		API_url = IP + "/adProvider/changeSubscription";
 		updateSubscriptionData(postData, API_url);
 
 	});

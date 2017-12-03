@@ -30,12 +30,15 @@ function ajaxCall(postData, url, sessionVar, redirectURL){
 
 
 $("form").submit(function () {
+		var getIP = sessionStorage.getItem("IP");
+		var IP = JSON.parse(getIP);
+		
         switch(this.id) {
             case "viewer-login-form":
                 var $email = $('#viewer-login_user').val();
 				var $password= $('#viewer-login_pass').val();
                 var postData = {email: $email, password: $password };
-				url = "http://52.52.157.178:3000/viewer/login";
+				url = IP +"/viewer/login";
 				ajaxCall(postData, url, 'viewerInfo', "/viewer/dashboard.php");
                 return false;
                 break;
@@ -43,7 +46,7 @@ $("form").submit(function () {
                 var $email = $('#adProvider-login_user').val();
 				var $password= $('#adProvider-login_pass').val();
                 var postData = {email: $email, password: $password };
-				url = "http://52.52.157.178:3000/adProvider/login";
+				url = IP +"/adProvider/login";
 				ajaxCall(postData, url, 'adProviderInfo', "/adProvider/dashboard.php");
                 return false;
                 break;
@@ -51,7 +54,7 @@ $("form").submit(function () {
                 var $email = $('#contentProvider-login_user').val();
 				var $password= $('#contentProvider-login_pass').val();
                 var postData = {email: $email, password: $password };
-				url = "http://52.52.157.178:3000/contentProvider/login";
+				url = IP +"/contentProvider/login";
 				ajaxCall(postData, url, 'contentProviderInfo', "/contentProvider/dashboard.php");
                 return false;
                 break;
@@ -59,7 +62,7 @@ $("form").submit(function () {
                 var $email = $('#admin-login_user').val();
 				var $password= $('#admin-login_pass').val();
                 var postData = {email: $email, password: $password };
-				url = "http://52.52.157.178:3000/admin/login";
+				url = IP +"/admin/login";
 				ajaxCall(postData, url, 'adminInfo', "/admin/dashboard.php");
                 return false;
                 break;

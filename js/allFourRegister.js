@@ -41,7 +41,11 @@ $("form").submit(function () {
 				var $strDate = now.getFullYear() + '-' + (now.getMonth()+1) + '-' + now.getDate();
 				var $subscriptionId = document.getElementById('viewer_subscription').value;
 				var postData = {email: $email,firstName: $fname,lastName: $lname,startDate: $strDate,password: $password, subscriptionId: $subscriptionId};
-				url = "http://52.52.157.178:3000/viewer/signup";
+				
+				
+				var getIP = sessionStorage.getItem("IP");
+				var IP = JSON.parse(getIP);
+				url = IP + "/viewer/signup";
 				
 				ajaxCall(postData, url, 'viewerInfo', "/viewer/dashboard.php");
                 return false;
@@ -56,7 +60,10 @@ $("form").submit(function () {
 				var $subscriptionId = document.getElementById('ad_subscription').value;
 				var postData = {email: $email,firstName: $fname,lastName: $lname,startDate: $strDate,password: $password, subscriptionId: $subscriptionId};
 				console.log(postData);
-				url = "http://52.52.157.178:3000/adProvider/signup";
+				
+				var getIP = sessionStorage.getItem("IP");
+				var IP = JSON.parse(getIP);
+				url = IP + "/adProvider/signup";
 				
 				ajaxCall(postData, url, 'adProviderInfo', "/adProvider/dashboard.php");
                 return false;
@@ -66,7 +73,10 @@ $("form").submit(function () {
 				var $email = $('#contentProvider-register_email').val();
 				var $password= $('#contentProvider-register_password').val();
 				var postData = {email: $email,companyName: $cname, password: $password};
-				url = "http://52.52.157.178:3000/contentProvider/signup";
+				
+				var getIP = sessionStorage.getItem("IP");
+				var IP = JSON.parse(getIP);
+				url = IP+ "/contentProvider/signup";
 				
 				ajaxCall(postData, url, 'contentProviderInfo', "/contentProvider/dashboard.php");
                 return false;

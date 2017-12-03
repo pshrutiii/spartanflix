@@ -40,7 +40,9 @@ function addDropdowns(selId, variable, json){
 		var $viewerId = output["id"];
 		var $subscriptionId = output["subscriptionId"];
 
-		API_url = "http://52.52.157.178:3000/viewer/getAllSubscriptions?viewerId=" + $viewerId + "&subscriptionId=" + $subscriptionId 
+		var getIP = sessionStorage.getItem("IP");
+		var IP = JSON.parse(getIP);
+		API_url = IP + "/viewer/getAllSubscriptions?viewerId=" + $viewerId + "&subscriptionId=" + $subscriptionId 
 		getSubscriptionData(API_url);
 		
 	});
@@ -52,7 +54,9 @@ function addDropdowns(selId, variable, json){
 		var $subscriptionId = $( "#change-plan_id option:selected" ).text();
 		var postData = {viewerId: $viewerId, subscriptionId: $subscriptionId};
 
-		API_url = "http://52.52.157.178:3000/viewer/changeSubscription";
+		var getIP = sessionStorage.getItem("IP");
+		var IP = JSON.parse(getIP);
+		API_url = IP + "/viewer/changeSubscription";
 		updateSubscriptionData(postData, API_url);
 
 	});
