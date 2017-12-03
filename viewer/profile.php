@@ -2,9 +2,13 @@
 <head>
 <?php include("../includes/header.html"); ?>
 <link href="../css/form.css" rel="stylesheet">
+<link href="../css/pricingtables.css" rel="stylesheet">
 <style>
 .fa{
 	margin-right:3%;
+}
+.modal-body select{
+	margin: 3% 0;
 }
 </style>
 <body>
@@ -38,7 +42,7 @@
 						<div class="col-sm-6">
 							<i class="fa fa-bell" aria-hidden="true"></i>Subscription Plan: <span id="subscriptionPlan"></span>
 							<br/>
-							<i class="fa fa-users" aria-hidden="true"></i>Dependent email <span id="dependentEmail"></span>
+							<i class="fa fa-users" aria-hidden="true"></i>dependent@test.com<span id="dependentEmail"></span>
 						</div>
 						<div class="col-sm-3">
 							<button type="submit" class="btn btn-primary" name="change-plan-btn" id="change-plan-btn" value="change-plan" data-toggle="modal" data-target="#change-plan-modal">Change Plan</button>
@@ -49,6 +53,78 @@
 			</div>
 		</div>
 	</div>
+	
+	<div class="container pcontent">
+	<div class="row">
+		<!-- Pricing -->
+		<div class="col-md-3">
+			<div class="pricing hover-effect">
+				<div class="pricing-head">
+					<h3>Plan 1<span>
+					Movies + ads</span>
+					</h3>
+					<h4><i>$</i>24<i>.99</i>
+					<span>
+					Per Month </span>
+					</h4>
+				</div>
+				<div class="pricing-footer">
+					<p> Watch unlimited movies with ads.
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="pricing hover-effect">
+				<div class="pricing-head">
+					<h3>Plan 2<span>
+					Movies + no ads </span>
+					</h3>
+					<h4><i>$</i>29<i>.99</i>
+					<span>
+					Per Month </span>
+					</h4>
+				</div>
+				<div class="pricing-footer">
+					<p> Watch unlimited movies without any interruptions.
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="pricing pricing-active hover-effect">
+				<div class="pricing-head pricing-head-active">
+					<h3>Plan 3<span>
+					Movies, Documentaries, Series + ads </span>
+					</h3>
+					<h4><i>$</i>44<i>.99</i>
+					<span>
+					Per Month </span>
+					</h4>
+				</div>
+				<div class="pricing-footer">
+					<p> Access to ALL videos with ads.</p>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="pricing hover-effect">
+				<div class="pricing-head">
+					<h3>Plan 4<span>
+					Movies, Documentaries, Series + no ads </span>
+					</h3>
+					<h4><i>$</i>49<i>.99</i>
+					<span>
+					Per Month </span>
+					</h4>
+				</div>
+				<div class="pricing-footer">
+					<p> Access to ALL videos without ANY ads.</p>
+				</div>
+			</div>
+		</div>
+		<!--//End Pricing -->
+	
 	
 	
 	<!-- BEGIN # CHANGE PLAN MODAL LOGIN -->
@@ -67,11 +143,15 @@
                 <div id="admin-div-forms">
 					<form id="change-plan-form">
 		                <div class="modal-body" id="subscription-edits-tab">
-				    		<!--inline js-->
+				    		<select id='change-plan_id' class='form-control' type='text' required></select>
+							<!--select id='change-plan_title' class='form-control' type='text' ></select>
+							<select id='change-plan_price' class='form-control' type='text' ></select>
+							<select id='change-plan_duration' class='form-control' type='text' ></select-->
+							
         		    	</div>
 				        <div class="modal-footer">
                             <div>
-                                <button type="submit" class="btn btn-primary btn-lg btn-block" name="change-plan-update" value="change-plan-update">Update</button>
+                                <button type="submit" class="btn btn-primary btn-lg btn-block" id="change-plan-update"  name="change-plan-update" value="change-plan-update">Update</button>
                             </div>
 				    	    <div>
                                 
@@ -97,51 +177,13 @@
 			document.getElementById("startDate").innerHTML = output["startDate"];
 			document.getElementById("subscriptionPlan").innerHTML = output["subscriptionId"];
 			//document.getElementById("dependent-email").innerHTML = output["dependent"];
-			//Edit items from content list
 			
-		});
-		function getSubscriptionData(url){	 
-	 
-			$.getJSON( url, { format: "json"} )
-				.done(function( json ) {
-					for (var content in json.subscriptions) {
-						$("#subscription-edits-tab").append("<input id='change-plan_id' class='form-control' type='text' placeholder='Plan Id' name='change-plan_id' required><input id='change-plan_price' class='form-control' type='text' placeholder='Cost' name='change-plan_price' required><input id='change-plan_duration' class='form-control' type='text' placeholder='Duration' name='change-plan_duration' required><input id='change-plan_description' class='form-control' type='text' placeholder='Description' name='change-plan_description' required>");
-					}
-				})
-				.fail(function( jqxhr, textStatus, error ) {
-					var err = textStatus + ", " + error;
-					console.log( "Request Failed: " + err );
-				});
-		}
-		
-		$(document).on('click', '#change-plan-btn', function(){ 
+			$('#change-plan_title').attr("disabled", true); 
+			$('#change-plan_price').attr("disabled", true); 
+			$('#change-plan_duration').attr("disabled", true); 
 			
-			
-			console.log("I'm here");
-			//url = "http://52.52.157.178:3000/viewer/signup"; // get ALL subscriptions
-			//getSubscriptionData(postData, url);
-			
-			
-			/* var tr = $(this).closest('tr');
-			
-			var $hTitle = tr.find('#content-title').text();
-			var $hDirector = tr.find('#content-director').text();
-			var $hYear = tr.find('#content-year').text();
-			var $hType= tr.find('#content-type').text();
-			var $hApproved= tr.find('#content-approved').text();
-			var postData = {title: $hTitle,director: $hDirector,year: $hYear,type: $hType,approved: $hApproved};
-			copyDetails($hTitle, 'admin-content-title');
-			copyDetails($hDirector, 'admin-content-director');
-			copyDetails($hYear, 'admin-content-year');
-			copyDetails($hType, 'admin-content-type');
-			copyDetails($hApproved, 'admin-content-approved');
-			function copyDetails(text, field) {
-			  document.getElementById(field).value = text;
-			} */
-			
-			
-
 		});
 	</script>
+	<script src="../js/viewerSubscription.js"></script>
 </body>
 </html>

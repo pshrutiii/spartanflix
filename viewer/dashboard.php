@@ -50,7 +50,7 @@
 						</div>
 						<br/>
 						<div class="row no-gutter popup-gallery" id="dashboard-tabs">
-							<!--Being populated by getData.js-->
+							<!--Being populated by viewerData.js-->
 						</div>
 					</div>
 					<div role="tabpanel" class="tab-pane" id="favorites">

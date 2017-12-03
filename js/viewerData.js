@@ -43,7 +43,6 @@ $(document).ready(function(){
 	var output = JSON.parse(readSessionData);
 	viewerId = output["id"];
 	API_url = "http://52.52.157.178:3000/viewer/getViewerContent?viewerId=" + viewerId;
-	//test_url = "http://52.52.157.178:3000/viewer/allHistoryAndFavorite?viewerId=1"
 	getData(API_url);
 	
 });
