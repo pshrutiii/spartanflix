@@ -8,7 +8,7 @@
 }
 </style>
 <body>
-    <?php include("../includes/viewerNav2.html"); ?>
+    <?php include("../includes/adProviderNav2.html"); ?>
 	
 	<div class="container padding-10" style="margin-left: 30%;">
 		<div class="row">
@@ -89,7 +89,7 @@
 	
 		$(document).ready(function(){
 			//filling data into Profile
-			var readSessionData = sessionStorage.getItem("viewerInfo");
+			var readSessionData = sessionStorage.getItem("adProviderInfo");
 			var output = JSON.parse(readSessionData);
 			document.getElementById("fName").innerHTML = output["fname"];
 			document.getElementById("lName").innerHTML = output["lname"];

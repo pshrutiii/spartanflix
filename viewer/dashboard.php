@@ -4,7 +4,7 @@
 <link href="../css/favFilter.css" rel="stylesheet">
 </head>
 <body>
-    <?php include("../includes/nav2.html"); ?>
+    <?php include("../includes/viewerNav.html"); ?>
     <div class="container-fluid padding-10 text-center">
         <h2 class="section-heading">Welcome <span id="username"></span></h2>
         <hr class="primary">
@@ -75,7 +75,6 @@
 												<th>Title</th>
 												<th>Director</th>
 												<th>Type</th>
-												<th>Rating</th>
 											</tr>
 										</thead>
 										<tbody id="favorites-tab">
@@ -148,7 +147,7 @@
 		$(document).ready(function(){
 			var readSessionData = sessionStorage.getItem("viewerInfo");
 			var output = JSON.parse(readSessionData);
-			document.getElementById("username").innerHTML = output["firstName"]+ "!";
+			document.getElementById("username").innerHTML = output["fname"]+ "!";
 			
 			//Dashboard - FILTER and search jquery
 			$('.dashboard_search-panel .dropdown-menu').find('a').click(function(e) {

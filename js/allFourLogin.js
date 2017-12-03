@@ -57,7 +57,7 @@ $("form").submit(function () {
                 break;
 			case "admin-login-form":
                 var $email = $('#admin-login_user').val();
-				var $password= $('#admin-login_user').val();
+				var $password= $('#admin-login_pass').val();
                 var postData = {email: $email, password: $password };
 				url = "http://52.52.157.178:3000/admin/login";
 				ajaxCall(postData, url, 'adminInfo', "/admin/dashboard.php");

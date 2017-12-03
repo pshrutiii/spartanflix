@@ -4,7 +4,7 @@
 <link href="../css/favFilter.css" rel="stylesheet">
 </head>
 <body>
-    <?php include("../includes/nav2.html"); ?>
+    <?php include("../includes/adProviderNav.html"); ?>
     <div class="container-fluid padding-10 text-center">
         <h2 class="section-heading">Welcome Ad Provider!</h2>
         <hr class="primary">
@@ -111,7 +111,7 @@
 			});		
 		});
 	</script>
-	<script src="../js/adminData.js"></script>
+	
 
 </body>
 </html>

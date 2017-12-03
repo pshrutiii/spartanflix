@@ -34,9 +34,9 @@ function removeData(postData, url){
 
 $(document).ready(function(){
 	//TODO: update URL with hardcoded admin ID
-	//API_url = "http://52.52.157.178:3000/admin/contents?adminId=" + adminId;
-	test_url = "http://52.52.157.178:3000/viewer/allHistoryAndFavorite?viewerId=1"
-	getData(test_url);
+	API_url = "http://52.52.157.178:3000/admin/contents?adminId=" + adminId;
+	//test_url = "http://52.52.157.178:3000/viewer/allHistoryAndFavorite?viewerId=1"
+	getData(API_url);
 });
 
 //Remove items from content list
@@ -82,8 +82,6 @@ $(document).on('click', '.content-edit-btn', function(){
 	function copyDetails(text, field) {
 	  document.getElementById(field).value = text;
 	}
-	
-	
 	
 	//url = "http://52.52.157.178:3000/viewer/signup";
 	//removeData(postData, url);

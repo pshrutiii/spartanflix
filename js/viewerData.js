@@ -3,10 +3,10 @@ function getData(url){
 	$.getJSON( url, { format: "json"} )
 		.done(function( json ) {
 			for (var content in json.contentList) {
-				$("#dashboard-tabs").append("<div class='col-md-3 col-sm-3' ><a href='#page-URL' class='portfolio-box'><img src='" + json.contentList[content]["imgURL"] + "' class='img-responsive ' alt=''><div class='portfolio-box-caption'><div class='portfolio-box-caption-content'><div class='project-name'>" + json.contentList[content]["title"] + "</div><div class='project-category text-faded'>" + json.contentList[content]["type"] + "</div></div></div></a></div>");
+				$("#dashboard-tabs").append("<div class='col-md-3 col-sm-3' ><a href='#page-URL' class='portfolio-box'><img src='#imageURL' class='img-responsive ' alt=''><div class='portfolio-box-caption'><div class='portfolio-box-caption-content'><div class='project-name'>" + json.contentList[content]["title"] + "</div><div class='project-category text-faded'>" + json.contentList[content]["type"] + "</div></div></div></a></div>");
 			}
 			for (var favorite in json.favoriteList) {
-				$("#favorites-tab").append("<tr><td>" + json.favoriteList[favorite]["year"] +"</td><td>" + json.favoriteList[favorite]["title"] +"</td><td>" + json.favoriteList[favorite]["director"] +"</td><td>" + json.favoriteList[favorite]["type"] +"</td><td>" + json.favoriteList[favorite]["rating"] +"</td></tr>");
+				$("#favorites-tab").append("<tr><td>" + json.favoriteList[favorite]["year"] +"</td><td>" + json.favoriteList[favorite]["title"] +"</td><td>" + json.favoriteList[favorite]["director"] +"</td><td>" + json.favoriteList[favorite]["type"] +"</td></tr>");
 			}
 			for (var history in json.historyList) {
 				$("#history-tab").append("<tr><td id='history-title'>" + json.historyList[history]["title"] +"</td><td id='history-director'>" + json.historyList[history]["director"] +"</td><td id='history-year'>" + json.historyList[history]["year"] +"</td><td id='history-type'>" + json.historyList[history]["type"] +"</td><td id='history-rating'>" + json.historyList[history]["rating"] +"</td><td class='history-delete-btn'><i class='fa fa-trash-o' aria-hidden='true' style='color:red;'></i></td></tr>");
@@ -42,9 +42,9 @@ $(document).ready(function(){
 	var readSessionData = sessionStorage.getItem("viewerInfo");
 	var output = JSON.parse(readSessionData);
 	viewerId = output["id"];
-	API_url = "http://52.52.157.178:3000/viewer/allHistoryAndFavorite?viewerId=" + viewerId;
-	test_url = "http://52.52.157.178:3000/viewer/allHistoryAndFavorite?viewerId=1"
-	getData(test_url);
+	API_url = "http://52.52.157.178:3000/viewer/getViewerContent?viewerId=" + viewerId;
+	//test_url = "http://52.52.157.178:3000/viewer/allHistoryAndFavorite?viewerId=1"
+	getData(API_url);
 	
 });
 

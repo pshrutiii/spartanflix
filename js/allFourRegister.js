@@ -40,7 +40,7 @@ $("form").submit(function () {
 				var now = new Date();
 				var $strDate = now.getFullYear() + '-' + (now.getMonth()+1) + '-' + now.getDate();
 				var $subscriptionId = document.getElementById('viewer_subscription').value;
-				var postData = {email: $email,firstName: $fname,lastName: $lname,startDate: $strDate,password: $password, subscriptionId: $subscriptionId};
+				var postData = {email: $email,fname: $fname,lname: $lname,startDate: $strDate,password: $password, subscriptionId: $subscriptionId};
 				url = "http://52.52.157.178:3000/viewer/signup";
 				
 				ajaxCall(postData, url, 'viewerInfo', "/viewer/dashboard.php");
@@ -54,7 +54,7 @@ $("form").submit(function () {
 				var now = new Date();
 				var $strDate = now.getFullYear() + '-' + (now.getMonth()+1) + '-' + now.getDate();
 				var $subscriptionId = document.getElementById('ad_subscription').value;
-				var postData = {email: $email,firstName: $fname,lastName: $lname,startDate: $strDate,password: $password, subscriptionId: $subscriptionId};
+				var postData = {email: $email,fname: $fname,lname: $lname,startDate: $strDate,password: $password, subscriptionId: $subscriptionId};
 				url = "http://52.52.157.178:3000/adProvider/signup";
 				
 				ajaxCall(postData, url, 'adProviderInfo', "/adProvider/dashboard.php");
@@ -64,7 +64,7 @@ $("form").submit(function () {
                 var $cname = $('#contentProvider-register_companyName').val();
 				var $email = $('#contentProvider-register_email').val();
 				var $password= $('#contentProvider-register_password').val();
-				var postData = {email: $email,companyName: $cname, password: $password};
+				var postData = {email: $email,name: $cname, password: $password};
 				url = "http://52.52.157.178:3000/contentProvider/signup";
 				
 				ajaxCall(postData, url, 'contentProviderInfo', "/contentProvider/dashboard.php");

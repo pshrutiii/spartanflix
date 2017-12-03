@@ -4,7 +4,7 @@
 <link href="../css/favFilter.css" rel="stylesheet">
 </head>
 <body>
-    <?php include("../includes/nav4.html"); ?>
+    <?php include("../includes/adminNav.html"); ?>
     <div class="container-fluid padding-10 text-center">
         <h2 class="section-heading">Welcome Admin!</h2>
         <hr class="primary">
@@ -112,6 +112,5 @@
 		});
 	</script>
 	<script src="../js/adminData.js"></script>
-
 </body>
 </html>
