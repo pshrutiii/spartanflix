@@ -35,24 +35,24 @@ function addDropdowns(selId, variable, json){
 	}
 	
 	$(document).on('click', '#change-plan-btn', function(){ 
-		var readSessionData = sessionStorage.getItem("viewerInfo");
+		var readSessionData = sessionStorage.getItem("adProviderInfo");
 		var output = JSON.parse(readSessionData);
-		var $viewerId = output["id"];
+		var $adProviderId = output["id"];
 		var $subscriptionId = output["subscriptionId"];
 
-		API_url = "http://52.52.157.178:3000/viewer/getAllSubscriptions?viewerId=" + $viewerId + "&subscriptionId=" + $subscriptionId 
+		API_url = "http://52.52.157.178:3000/adProvider/getAllSubscriptions?adProviderId=" + $adProviderId + "&subscriptionId=" + $subscriptionId 
 		getSubscriptionData(API_url);
 		
 	});
 	
 	$(document).on('click', '#change-plan-update', function(){ 
-		var readSessionData = sessionStorage.getItem("viewerInfo");
+		var readSessionData = sessionStorage.getItem("adProviderInfo");
 		var output = JSON.parse(readSessionData);
-		var $viewerId = output["id"];
+		var $adProviderId = output["id"];
 		var $subscriptionId = $( "#change-plan_id option:selected" ).text();
-		var postData = {viewerId: $viewerId, subscriptionId: $subscriptionId};
+		var postData = {adProviderId: $adProviderId, subscriptionId: $subscriptionId};
 
-		API_url = "http://52.52.157.178:3000/viewer/changeSubscription";
+		API_url = "http://52.52.157.178:3000/adProvider/changeSubscription";
 		updateSubscriptionData(postData, API_url);
 
 	});

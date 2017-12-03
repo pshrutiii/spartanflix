@@ -30,9 +30,9 @@
 							
 							<p>
 								<i class="fa fa-envelope" aria-hidden="true"></i><span id="email"></span>
-								<br />
+								<!--br />
 								<i class="fa fa-calendar" aria-hidden="true"></i>Joined since: <span id="startDate"></span>
-								<br />
+								<br /-->
 							</p>
 						</div>
 					</div>
@@ -138,12 +138,12 @@
 	
 		$(document).ready(function(){
 			//filling data into Profile
-			var readSessionData = sessionStorage.getItem("viewerInfo");
+			var readSessionData = sessionStorage.getItem("adProviderInfo");
 			var output = JSON.parse(readSessionData);
-			document.getElementById("fName").innerHTML = output["firstName"];
-			document.getElementById("lName").innerHTML = output["lastNname"];
+			document.getElementById("fName").innerHTML = output["fname"];
+			document.getElementById("lName").innerHTML = output["lname"];
 			document.getElementById("email").innerHTML = output["email"];
-			document.getElementById("startDate").innerHTML = output["startDate"];
+			//document.getElementById("startDate").innerHTML = output["startDate"];
 			document.getElementById("subscriptionPlan").innerHTML = output["subscriptionId"];
 			//document.getElementById("dependent-email").innerHTML = output["dependent"];
 			
