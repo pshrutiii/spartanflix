@@ -12,9 +12,9 @@
 	<div class="container padding-10" style="margin-left: 30%;">
 		<div class="row">
 			<div class="col-xs-12 col-sm-6 col-md-6">
-				<div class="well well-sm" style="background:white;">
+				<div class="well well-sm">
 					<div class="row">
-						<div class="col-sm-6 col-md-4">
+						<div class="col-sm-6 col-md-4" style="margin-top: 2%;">
 							<img src="//i.imgur.com/9td5htZ.png" alt="" class="img-rounded img-responsive" />
 						</div>
 						<div class="col-sm-6 col-md-8">
@@ -28,10 +28,15 @@
 								<br />
 								<i class="fa fa-calendar" aria-hidden="true"></i>Joined since: <span id="startDate"></span>
 								<br />
-								<i class="fa fa-bell" aria-hidden="true"></i>Subscription Plan: <span id="subscriptionPlan"></span>
 							</p>
 						</div>
 					</div>
+				</div>
+				<div class="well">
+					<i class="fa fa-bell" aria-hidden="true"></i>Subscription Plan: <span id="subscriptionPlan"></span>
+					<br/>
+					<i class="fa fa-users" aria-hidden="true"></i>Dependent email <span id="dependent-email"></span>
+					<button type="submit" class="btn btn-primary btn-lg btn-block" name="viewer-login-submit" id="viewer-login-submit" value="login">Login</button>
 				</div>
 			</div>
 		</div>
@@ -47,6 +52,7 @@
 			document.getElementById("email").innerHTML = output["email"];
 			document.getElementById("startDate").innerHTML = output["startDate"];
 			document.getElementById("subscriptionPlan").innerHTML = output["subscriptionId"];
+			//document.getElementById("dependent-email").innerHTML = output["dependent"];
 		});
 	</script>
 </body>

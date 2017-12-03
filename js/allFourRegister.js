@@ -61,11 +61,10 @@ $("form").submit(function () {
                 return false;
                 break;
 			case "contentProvider-register-form":
-                var $fname = $('#contentProvider-register_firstName').val();
-				var $lname = $('#contentProvider-register_lastName').val();
+                var $cname = $('#contentProvider-register_companyName').val();
 				var $email = $('#contentProvider-register_email').val();
 				var $password= $('#contentProvider-register_password').val();
-				var postData = {email: $email,firstName: $fname,lastName: $lname, password: $password};
+				var postData = {email: $email,companyName: $cname, password: $password};
 				url = "http://52.52.157.178:3000/contentProvider/signup";
 				
 				ajaxCall(postData, url, 'contentProviderInfo', "/contentProvider/dashboard.php");

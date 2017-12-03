@@ -78,44 +78,17 @@
                             </div>
 				    		<input id="viewer-login_user" class="form-control" type="text" placeholder="E-Mail" name="login_user" required>
 				    		<input id="viewer-login_pass" class="form-control" type="password" placeholder="Password" name="login_pass" required>
-                            <!--div class="checkbox">
-                                <label>
-                                    <input type="checkbox"> Remember me
-                                </label>
-                            </div-->
         		    	</div>
 				        <div class="modal-footer">
                             <div>
                                 <button type="submit" class="btn btn-primary btn-lg btn-block" name="viewer-login-submit" id="viewer-login-submit" value="login">Login</button>
                             </div>
 				    	    <div>
-                                <!--button id="viewer-login_lost_btn" type="button" class="btn btn-link">Forgot Password?</button-->
                                 <button id="viewer-login_register_btn" type="button" class="btn btn-link">Register</button>
                             </div>
 				        </div>
                     </form>
                     <!-- End # Login Form -->
-                    
-                    <!-- Begin | Lost Password Form -->
-                    <form id="viewer-lost-form" style="display:none;">
-    	    		    <div class="modal-body">
-		    				<div id="viewer-div-lost-msg">
-                                <div id="viewer-icon-lost-msg" class="glyphicon glyphicon-chevron-right"></div>
-                                <span id="viewer-text-lost-msg">Enter Username</span>
-                            </div>
-		    				<input id="viewer-lost_email" class="form-control" type="text" placeholder="E-Mail" required>
-            			</div>
-		    		    <div class="modal-footer">
-                            <div>
-                                <button type="submit" class="btn btn-primary btn-lg btn-block">Send</button>
-                            </div>
-                            <div>
-                                <button id="viewer-lost_login_btn" type="button" class="btn btn-link">Login</button>
-                                <button id="viewer-lost_register_btn" type="button" class="btn btn-link">Register</button>
-                            </div>
-		    		    </div>
-                    </form>
-                    <!-- End | Lost Password Form -->
                     
                     <!-- Begin | Register Form -->
                     <form id="viewer-register-form" style="display:none;">
@@ -144,7 +117,6 @@
                             </div>
                             <div>
                                 <button id="viewer-register_login_btn" type="button" class="btn btn-link">Login</button>
-                                <!--button id="viewer-register_lost_btn" type="button" class="btn btn-link">Forgot Password?</button-->
                             </div>
 		    		    </div>
                     </form>
@@ -180,44 +152,17 @@
                             </div>
 				    		<input id="adProvider-login_user" class="form-control" type="text" placeholder="E-Mail" name="login_user" required>
 				    		<input id="adProvider-login_pass" class="form-control" type="password" placeholder="Password" name="login_pass" required>
-                            <!--div class="checkbox">
-                                <label>
-                                    <input type="checkbox"> Remember me
-                                </label>
-                            </div-->
         		    	</div>
 				        <div class="modal-footer">
                             <div>
                                 <button type="submit" class="btn btn-primary btn-lg btn-block" name="adProvider-login-submit" value="login">Login</button>
                             </div>
 				    	    <div>
-                                <!--button id="adProvider-login_lost_btn" type="button" class="btn btn-link">Forgot Password?</button-->
                                 <button id="adProvider-login_register_btn" type="button" class="btn btn-link">Register</button>
                             </div>
 				        </div>
                     </form>
                     <!-- End # Login Form -->
-                    
-                    <!-- Begin | Lost Password Form -->
-                    <form id="adProvider-lost-form" style="display:none;">
-    	    		    <div class="modal-body">
-		    				<div id="adProvider-div-lost-msg">
-                                <div id="adProvider-icon-lost-msg" class="glyphicon glyphicon-chevron-right"></div>
-                                <span id="adProvider-text-lost-msg">Enter Username</span>
-                            </div>
-		    				<input id="adProvider-lost_email" class="form-control" type="text" placeholder="E-Mail" required>
-            			</div>
-		    		    <div class="modal-footer">
-                            <div>
-                                <button type="submit" class="btn btn-primary btn-lg btn-block">Send</button>
-                            </div>
-                            <div>
-                                <button id="adProvider-lost_login_btn" type="button" class="btn btn-link">Login</button>
-                                <button id="adProvider-lost_register_btn" type="button" class="btn btn-link">Register</button>
-                            </div>
-		    		    </div>
-                    </form>
-                    <!-- End | Lost Password Form -->
                     
                     <!-- Begin | Register Form -->
                     <form id="adProvider-register-form" style="display:none;" method="post" action="includes/validate.php">
@@ -244,7 +189,6 @@
                             </div>
                             <div>
                                 <button id="adProvider-register_login_btn" type="button" class="btn btn-link">Login</button>
-                                <!--button id="adProvider-register_lost_btn" type="button" class="btn btn-link">Forgot Password?</button-->
                             </div>
 		    		    </div>
                     </form>
@@ -280,45 +224,18 @@
                             </div>
 				    		<input id="contentProvider-login_user" class="form-control" type="text" placeholder="E-Mail" name="login_user" required>
 				    		<input id="contentProvider-login_pass" class="form-control" type="password" placeholder="Password" name="login_pass" required>
-                            <!--div class="checkbox">
-                                <label>
-                                    <input type="checkbox"> Remember me
-                                </label>
-                            </div-->
         		    	</div>
 				        <div class="modal-footer">
                             <div>
                                 <button type="submit" class="btn btn-primary btn-lg btn-block" name="contentProvider-login-submit" value="login">Login</button>
                             </div>
 				    	    <div>
-                                <!--button id="contentProvider-login_lost_btn" type="button" class="btn btn-link">Forgot Password?</button-->
                                 <button id="contentProvider-login_register_btn" type="button" class="btn btn-link">Register</button>
                             </div>
 				        </div>
                     </form>
                     <!-- End # Login Form -->
-                    
-                    <!-- Begin | Lost Password Form -->
-                    <form id="contentProvider-lost-form" style="display:none;">
-    	    		    <div class="modal-body">
-		    				<div id="contentProvider-div-lost-msg">
-                                <div id="contentProvider-icon-lost-msg" class="glyphicon glyphicon-chevron-right"></div>
-                                <span id="contentProvider-text-lost-msg">Enter Username</span>
-                            </div>
-		    				<input id="contentProvider-lost_email" class="form-control" type="text" placeholder="E-Mail" required>
-            			</div>
-		    		    <div class="modal-footer">
-                            <div>
-                                <button type="submit" class="btn btn-primary btn-lg btn-block">Send</button>
-                            </div>
-                            <div>
-                                <button id="contentProvider-lost_login_btn" type="button" class="btn btn-link">Login</button>
-                                <button id="contentProvider-lost_register_btn" type="button" class="btn btn-link">Register</button>
-                            </div>
-		    		    </div>
-                    </form>
-                    <!-- End | Lost Password Form -->
-                    
+                   
                     <!-- Begin | Register Form -->
                     <form id="contentProvider-register-form" style="display:none;" method="post" action="includes/validate.php">
             		    <div class="modal-body">
@@ -326,8 +243,7 @@
                                 <div id="contentProvider-icon-register-msg" class="glyphicon glyphicon-chevron-right"></div>
                                 <span id="contentProvider-text-register-msg">Register for an account.</span>
                             </div>
-		    				<input id="contentProvider-register_firstName" name="contentProvider-register_firstName" class="form-control" type="text" placeholder="First Name" required>
-                            <input id="contentProvider-register_lastName" name="contentProvider-register_lastName" class="form-control" type="text" placeholder="Last Name" required>
+		    				<input id="contentProvider-register_companyName" name="contentProvider-register_companyName" class="form-control" type="text" placeholder="Company Name" required>
                             <input id="contentProvider-register_email"  name="contentProvider-register_email" class="form-control" type="text" placeholder="E-Mail" required>
                             <input id="contentProvider-register_password"  name="contentProvider-register_password" class="form-control" type="password" placeholder="Password" required>  
             			</div>
@@ -337,7 +253,6 @@
                             </div>
                             <div>
                                 <button id="contentProvider-register_login_btn" type="button" class="btn btn-link">Login</button>
-                                <!--button id="contentProvider-register_lost_btn" type="button" class="btn btn-link">Forgot Password?</button-->
                             </div>
 		    		    </div>
                     </form>
@@ -373,42 +288,17 @@
                             </div>
 				    		<input id="admin-login_user" class="form-control" type="text" placeholder="E-Mail" name="login_user" required>
 				    		<input id="admin-login_pass" class="form-control" type="password" placeholder="Password" name="login_pass" required>
-                            <!--div class="checkbox">
-                                <label>
-                                    <input type="checkbox"> Remember me
-                                </label>
-                            </div-->
         		    	</div>
 				        <div class="modal-footer">
                             <div>
                                 <button type="submit" class="btn btn-primary btn-lg btn-block" name="admin-login-submit" value="login">Login</button>
                             </div>
 				    	    <div>
-                                <!--button id="admin-login_lost_btn" type="button" class="btn btn-link">Forgot Password?</button-->
+                                
                             </div>
 				        </div>
                     </form>
                     <!-- End # Login Form -->
-                    
-                    <!-- Begin | Lost Password Form -->
-                    <form id="admin-lost-form" style="display:none;">
-    	    		    <div class="modal-body">
-		    				<div id="admin-div-lost-msg">
-                                <div id="admin-icon-lost-msg" class="glyphicon glyphicon-chevron-right"></div>
-                                <span id="admin-text-lost-msg">Enter Username</span>
-                            </div>
-		    				<input id="admin-lost_email" class="form-control" type="text" placeholder="E-Mail" required>
-            			</div>
-		    		    <div class="modal-footer">
-                            <div>
-                                <button type="submit" class="btn btn-primary btn-lg btn-block">Send</button>
-                            </div>
-                            <div>
-                                <button id="admin-lost_login_btn" type="button" class="btn btn-link">Login</button>
-                            </div>
-		    		    </div>
-                    </form>
-                    <!-- End | Lost Password Form -->                   
                 </div>
 			</div>
 		</div>
