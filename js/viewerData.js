@@ -38,19 +38,19 @@ function getData(dashboardURL, favoriteURL, historyURL){
 
 function removeData(postData, url){
 	var jqxhr = $.ajax(
-			{
-				method: "UPDATE",
-				datatype : "json",
-				url: url,
-				data: postData
-			}
-			)
-			.done(function(data) {
-				console.log("DELETED");
-			})
-			.fail(function(status) {
-				console.log(status);
-			});
+	{
+		method: "UPDATE",
+		datatype : "json",
+		url: url,
+		data: postData
+	}
+	)
+	.done(function(data) {
+		console.log("DELETED");
+	})
+	.fail(function(status) {
+		console.log(status);
+	});
 
 }
 
