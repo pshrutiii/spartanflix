@@ -12,7 +12,7 @@
 }
 </style>
 <body>
-    <?php include("../includes/viewerNav2.html"); ?>
+    <?php include("../includes/adProviderNav2.html"); ?>
 	
 	<div class="container padding-10" style="margin-left: 30%;">
 		<div class="row">
