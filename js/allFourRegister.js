@@ -31,6 +31,9 @@ function ajaxCall(postData, url, sessionVar, redirectURL){
 
 
 $("form").submit(function () {
+		var getIP = sessionStorage.getItem("IP");
+		var IP = JSON.parse(getIP);
+		
         switch(this.id) {
             case "viewer-register-form":
                 var $fname = $('#viewer-register_firstName').val();

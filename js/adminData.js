@@ -1,9 +1,15 @@
 function getData(url){	 
-	 
 	$.getJSON( url, { format: "json"} )
 		.done(function( json ) {
-			for (var content in json.contentList) {
-				$("#admin-dashboard-tab").append("<tr><td id='content-title'>" + json.contentList[content]["title"] +"</td><td id='content-director'>" + json.contentList[content]["director"] +"</td><td id='content-year'>" + json.contentList[content]["year"] +"</td><td id='content-type'>" + json.contentList[content]["type"] +"</td><td id='content-approved'>" + json.contentList[content]["isApproved"] +"</td><td class='content-edit-btn'><a href='' data-toggle='modal' data-target='#admin-edit-modal'><i class='fa fa-pencil' aria-hidden='true' style='color:green;'></i></a></td><td class='content-delete-btn'><i class='fa fa-trash-o' aria-hidden='true' style='color:red;'></i></td></tr>");
+			for (var item in json) {
+				isApproved = json[item]['isApproved'];
+				if (isApproved == "1"){
+					isApproved = "Yes";
+				}
+				else{
+					isApproved = "No";
+				}
+				$("#content-dashboard-tab").append("<tr><td id='content-title'>" + json[item]['title'] +"</td><td id='content-description'>" + json[item]['description'] +"</td><td id='content-type'>" + json[item]['contentType'] +"</td><td id='content-provider'>" + json[item]['providerName'] +"</td><td id='content-id' hidden>" + json[item]['id'] +"</td><td id='content-approved'>" + isApproved +"</td><td class='content-edit-btn'><a href='' data-toggle='modal' data-target='#admin-edit-modal'><i class='fa fa-pencil' aria-hidden='true' style='color:green;'></i></a></td></tr>");
 			}
 		})
 		.fail(function( jqxhr, textStatus, error ) {
@@ -13,21 +19,21 @@ function getData(url){
 }
 
 
-function removeData(postData, url){
+function approveData(postData, url){
 	var jqxhr = $.ajax(
-			{
-				method: "UPDATE",
-				datatype : "json",
-				url: url,
-				data: postData
-			}
-			)
-			.done(function(data) {
-				console.log("DELETED");
-			})
-			.fail(function(status) {
-				console.log(status);
-			});
+	{
+		method: "POST",
+		datatype : "json",
+		url: url,
+		data: postData
+	}
+	)
+	.done(function(data) {
+		console.log("Approval");
+	})
+	.fail(function(status) {
+		console.log(status);
+	});
 
 }
 
@@ -36,63 +42,54 @@ $(document).ready(function(){
 	var getIP = sessionStorage.getItem("IP");
 	var IP = JSON.parse(getIP);
 	
-	var readSessionData = sessionStorage.getItem("adminInfo");
-	var output = JSON.parse(readSessionData);
-	adminId = output["id"];
-	
-	API_url = IP +"/admin/contents?adminId=" + adminId;
+	API_url = IP +"/admin/getAllContentAndAds";
 	getData(API_url);
 });
 
-//Remove items from content list
-$(document).on('click', '.content-delete-btn', function(){ 
-	var tr = $(this).closest('tr');
-	
-	var $hTitle = tr.find('#content-title').text();
-	var $hDirector = tr.find('#content-director').text();
-	var $hYear = tr.find('#content-year').text();
-	var $hType= tr.find('#content-type').text();
-	var $hApproved= tr.find('#content-approved').text();
-	var postData = {title: $hTitle,director: $hDirector,year: $hYear,type: $hType,approved: $hApproved};
-	
-	//console.log(postData);
-	
-	//url = "http://52.52.157.178:3000/viewer/signup";
-	//removeData(postData, url);
-	
-	// UI effects on delete
-	tr.fadeOut(200, function(){
-		tr.remove();
-	});
-});
+function setDropdown(selId, value){
+		var sel = document.getElementById(selId);
+		var opt = document.createElement('option');
+		opt.innerHTML = value;
+		opt.value = value;
+	}
 
-//Edit items from content list
+// Display in popup
 $(document).on('click', '.content-edit-btn', function(){ 
 	var tr = $(this).closest('tr');
-	
+	var $hId = tr.find('#content-id').text();
 	var $hTitle = tr.find('#content-title').text();
-	var $hDirector = tr.find('#content-director').text();
-	var $hYear = tr.find('#content-year').text();
-	var $hType= tr.find('#content-type').text();
+	var $hDescription = tr.find('#content-description').text();
+	var $hType = tr.find('#content-type').text();
+	var $hProvider= tr.find('#content-provider').text();
 	var $hApproved= tr.find('#content-approved').text();
-	var postData = {title: $hTitle,director: $hDirector,year: $hYear,type: $hType,approved: $hApproved};
 	
-	console.log(postData);
-	
+	copyDetails($hId, 'admin-content-id');
 	copyDetails($hTitle, 'admin-content-title');
-	copyDetails($hDirector, 'admin-content-director');
-	copyDetails($hYear, 'admin-content-year');
+	copyDetails($hDescription, 'admin-content-description');
 	copyDetails($hType, 'admin-content-type');
-	copyDetails($hApproved, 'admin-content-approved');
+	copyDetails($hProvider, 'admin-content-provider');
+	setDropdown('admin-content-approved', $hApproved);
 	function copyDetails(text, field) {
 	  document.getElementById(field).value = text;
 	}
-	
-	//url = "http://52.52.157.178:3000/viewer/signup";
-	//removeData(postData, url);
-
 });
 
-
-
-
+//Update approval
+$(document).on('click', '#admin-form-submit', function(){ 
+	var $hId = $('#admin-content-id').val();
+	var $hApproved= $('#admin-content-approved').val();
+	var $hType= $('#admin-content-type').val();
+	
+	if ($hApproved == "Yes"){
+		$hApproved = "1";
+	}
+	else{
+		$hApproved = "0";
+	}
+	
+	var postData = {id: $hId,isApproved: $hApproved,type: $hType};
+	var getIP = sessionStorage.getItem("IP");
+	var IP = JSON.parse(getIP);
+	API_url = IP + "/admin/approveDisaproveItem";
+	approveData(postData, API_url);
+});

@@ -39,6 +39,7 @@ $("form").submit(function () {
 				var $password= $('#viewer-login_pass').val();
                 var postData = {email: $email, password: $password };
 				url = IP +"/viewer/login";
+				console.log(url);
 				ajaxCall(postData, url, 'viewerInfo', "/viewer/dashboard.php");
                 return false;
                 break;
