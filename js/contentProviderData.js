@@ -67,7 +67,7 @@ $(document).ready(function(){
 	var getIP = sessionStorage.getItem("IP");
 	var IP = JSON.parse(getIP);
 	
-	API_url = IP + "/contentProvider/getContent?contentProviderId=" + contentProviderId+"&title=null&search=null";
+	API_url = IP + "/contentProvider/getContent?contentProviderId=" + contentProviderId;//+"&title=null&search=null";
 	getData(API_url);
 	
 });

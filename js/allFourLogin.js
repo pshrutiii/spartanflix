@@ -21,7 +21,6 @@ function ajaxCall(postData, url, sessionVar, redirectURL){
 		
 		userData.storeUserDataInSession(data);				
 		window.location.href=redirectURL;
-			
 		})
 		.fail(function(status) {
 			console.log(status);
@@ -39,7 +38,6 @@ $("form").submit(function () {
 				var $password= $('#viewer-login_pass').val();
                 var postData = {email: $email, password: $password };
 				url = IP +"/viewer/login";
-				console.log(url);
 				ajaxCall(postData, url, 'viewerInfo', "/viewer/dashboard.php");
                 return false;
                 break;

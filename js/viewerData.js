@@ -68,13 +68,11 @@ $(document).ready(function(){
 	var searchParam = $("#search_param").val();
 	console.log(director);
 	console.log(filterType);*/
-	dashboard_url = IP + "/viewer/getViewerContent?viewerId="+viewerId+"&contentType=null&director=null&search=null";
+	dashboard_url = IP + "/viewer/getViewerContent?viewerId="+viewerId;//+"&contentType=null&director=null&search=null";
 	favorite_url = IP + "/viewer/getFavorites?viewerId="+viewerId;
 	history_url = IP + "/viewer/getHistory?viewerId="+viewerId;
 	
-	getData(dashboard_url, favorite_url, history_url);
-	//getHistoryData(API_url);
-	
+	getData(dashboard_url, favorite_url, history_url);	
 });
 
 //Remove items from history list

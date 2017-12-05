@@ -78,12 +78,10 @@ $(document).on('click', '.content-delete-btn', function(){
 	var $adId= tr.find('#content-id').text();
 	var postData = {advertisementId: $adId};
 	
-	//console.log(postData);
-	
 	var getIP = sessionStorage.getItem("IP");
 	var IP = JSON.parse(getIP);
 	
-	API_url = IP + "/adProvider/removeAd";
+	API_url = IP + "/adProvider/removeContent";
 	removeData(postData, API_url);
 	
 	// UI effects on delete

@@ -90,6 +90,6 @@ $(document).on('click', '#admin-form-submit', function(){
 	var postData = {id: $hId,isApproved: $hApproved,type: $hType};
 	var getIP = sessionStorage.getItem("IP");
 	var IP = JSON.parse(getIP);
-	API_url = IP + "/admin/approveDisaproveItem";
+	API_url = IP + "/admin/approveDisapproveItem";
 	approveData(postData, API_url);
 });
