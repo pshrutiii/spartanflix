@@ -1,17 +1,15 @@
 <div class="container padding-10">
 	<div class="text-center">
-		<h2 class="section-heading">Like what you see?</h2>
-		<hr class="primary">
+		<!--h2 class="section-heading">Like what you see?</h2>
+		<hr class="primary"-->
 		<div class="row">
 			<div class="col-md-9">
             <?php 
-            while ($row = pg_fetch_row($result_img)) {
-                echo '<img src="'.$row[3].'" class="img-rounded" width="70%" height="auto"/>';
-                echo '<br/><br/>';
-                echo '<a href="#" class="btn btn-success btn-l sr-button "><i class="fa fa-envelope-o" aria-hidden="true"></i> Favorites</a> &nbsp&nbsp&nbsp&nbsp';
-                //echo '<a href="#" class="btn coloredBtn btn-l sr-button "><i class="fa fa-shopping-cart" aria-hidden="true"></i> ORder</a>';
-                echo '<p class="" style="padding-top: 2%;">'. $row[4]. '</p>';
-            }
+			echo'<img src="//i.ytimg.com/vi/NpEaa2P7qZI/maxresdefault.jpg" class="img-rounded" width="50%" height="auto"/> <br/><br/>';
+			echo '<div class="row lead" ><div id="hearts" class="starrr"></div></div>';
+			echo '<a href="#" class="btn btn-success btn-l sr-button "><i class="fa fa-envelope-o" aria-hidden="true"></i> Message</a> &nbsp&nbsp&nbsp&nbsp';
+			echo '<a href="#" class="btn coloredBtn btn-l sr-button "><i class="fa fa-shopping-cart" aria-hidden="true"></i> ORder</a> &nbsp&nbsp&nbsp&nbsp';
+			echo '<a href="#" class="btn btn-info btn-l sr-button ">Follow Artist</a> <br/> <br/>';
             ?>
 			</div>
 			<div class="col-md-3" >
@@ -27,7 +25,7 @@
 						<div class="col-md-2">
 							<div class="thumbnail" style="padding:0px";}>
 								<img class="img-responsive user-photo" src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png">
-								<span>name</span>
+								<!--span>name</span-->
 							</div><!-- /thumbnail -->
 							
 						</div><!-- /col-sm-1 -->

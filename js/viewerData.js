@@ -39,7 +39,7 @@ function getData(dashboardURL, favoriteURL, historyURL){
 function removeData(postData, url){
 	var jqxhr = $.ajax(
 	{
-		method: "UPDATE",
+		method: "POST",
 		datatype : "json",
 		url: url,
 		data: postData
