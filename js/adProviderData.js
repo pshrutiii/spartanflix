@@ -127,7 +127,7 @@ function getSearchData(url){
 		});
 }
 
-//Search and filter 
+//Search
 $(document).on('click', "#adProvider-search-btn", function(){
 	var searchVal = $("#searchVal").val();
 	
