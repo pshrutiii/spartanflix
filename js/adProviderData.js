@@ -67,7 +67,7 @@ $(document).ready(function(){
 	var getIP = sessionStorage.getItem("IP");
 	var IP = JSON.parse(getIP);
 	
-	API_url = IP + "/adProvider/getContent?adProviderId=" + adProviderId;
+	API_url = IP + "/adProvider/getAllAds?adProviderId=" + adProviderId;
 	getData(API_url);
 	
 });
@@ -76,8 +76,8 @@ $(document).ready(function(){
 $(document).on('click', '.content-delete-btn', function(){ 
 	var tr = $(this).closest('tr');
 	var $adId= tr.find('#content-id').text();
-	var postData = {advertisementId: $adId};
-	
+	var postData = {adId: $adId};
+
 	var getIP = sessionStorage.getItem("IP");
 	var IP = JSON.parse(getIP);
 	
@@ -96,14 +96,14 @@ $(document).on('click', '#content-upload-btn', function(){
 	var readSessionData = sessionStorage.getItem("adProviderInfo");
 	var output = JSON.parse(readSessionData);
 		
-	var $uTitle = $('#content-title').val();
-	var $uDescription = $('#content-description').val();
+	var $uTitle = $('#content-upload-title').val();
+	var $uDescription = $('#content-upload-description').val();
 	var $uId= output['id'];
 	var postData = {title: $uTitle,description: $uDescription, adProviderId: $uId};
 	
 	var getIP = sessionStorage.getItem("IP");
 	var IP = JSON.parse(getIP);
 	
-	API_url = IP + "/adProvider/uploadAd";
+	API_url = IP + "/adProvider/addAd";
 	uploadData(postData, API_url);
 });

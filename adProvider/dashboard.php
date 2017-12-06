@@ -79,8 +79,8 @@
 										<!--div id="content-icon-upload-msg" class="glyphicon glyphicon-chevron-right"></div>
 										<span id="content-text-upload-msg">upload Content</span-->
 									</div>
-									<input id="content-title" name="content-title" class="form-control" type="text" placeholder="Title" required style="margin-top:10px;">
-									<textarea id="content-description" name="content-description" class="form-control" type="text" placeholder="Description" required style="margin-top:10px;"></textarea>
+									<input id="content-upload-title" name="content-upload-title" class="form-control" type="text" placeholder="Title" required style="margin-top:10px;">
+									<textarea id="content-upload-description" name="content-upload-description" class="form-control" type="text" placeholder="Description" required style="margin-top:10px;"></textarea>
 									<!--input id="content-approved"  name="content-approved" class="form-control" type="text" placeholder="Approved" required-->
 								</div>
 								<div class="modal-footer">

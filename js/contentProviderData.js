@@ -9,7 +9,7 @@ function getData(url){
 				else{
 					isApproved = "No";
 				}
-				$("#content-dashboard-tab").append("<tr><td id='content-title'>" + json[item]['title'] +"</td><td id='content-director'>" + json[item]['director'] +"</td><td id='content-description'>" + json[item]['description'] +"</td><td id='content-name'>" + json[item]['name'] +"</td><td id='content-id' hidden>" + json[item]['id'] +"</td><td id='content-typeId' hidden>" + json[item]['contentTypeId'] +"</td><td id='content-approved'>" + isApproved +"</td><td class='content-delete-btn'><i class='fa fa-trash-o' aria-hidden='true' style='color:red;'></i></td></tr>");
+				$("#content-dashboard-tab").append("<tr><td id='content-title'>" + json[item]['title'] +"</td><td id='content-director'>" + json[item]['director'] +"</td><td id='content-description'>" + json[item]['description'] +"</td><td id='content-name'>" + json[item]['name'] +"</td><td id='content-id' hidden>" + json[item]['contentId'] +"</td><td id='content-typeId' hidden>" + json[item]['contentTypeId'] +"</td><td id='content-approved'>" + isApproved +"</td><td class='content-delete-btn'><i class='fa fa-trash-o' aria-hidden='true' style='color:red;'></i></td></tr>");
 			}
 		})
 		.fail(function( jqxhr, textStatus, error ) {
@@ -47,6 +47,7 @@ function uploadData(postData, url){
 	}
 	)
 	.done(function(data) {
+		alert(data);
 		console.log("UPLOADED");
 	})
 	.fail(function(status) {
@@ -66,7 +67,7 @@ $(document).ready(function(){
 	var getIP = sessionStorage.getItem("IP");
 	var IP = JSON.parse(getIP);
 	
-	API_url = IP + "/contentProvider/getContent?contentProviderId=" + contentProviderId;//+"&title=null&search=null";
+	API_url = IP + "/contentProvider/getContent?contentProviderId=" + contentProviderId;
 	getData(API_url);
 	
 });
@@ -74,10 +75,8 @@ $(document).ready(function(){
 //Remove items from content list
 $(document).on('click', '.content-delete-btn', function(){ 
 	var tr = $(this).closest('tr');
-	var $contentTypeId= tr.find('#content-typeId').text();
-	var postData = {contentId: $contentTypeId};
-	
-	console.log(postData);
+	var $contentId= tr.find('#content-id').text();
+	var postData = {contentId: $contentId};
 	
 	var getIP = sessionStorage.getItem("IP");
 	var IP = JSON.parse(getIP);
@@ -97,22 +96,23 @@ $(document).on('click', '#content-upload-btn', function(){
 	var readSessionData = sessionStorage.getItem("contentProviderInfo");
 	var output = JSON.parse(readSessionData);
 		
-	var $uTitle = $('#content-title').val();
-	var $uDescription = $('#content-description').val();
-	var $uDirector = $('#content-director').val();
-	var $uType= $('#content-type').val();
+	var $uTitle = $('#content-upload-title').val();
+	var $uDescription = $('#content-upload-description').val();
+	var $uDirector = $('#content-upload-director').val();
+	var $uType= $('#content-upload-type option:selected').text();
 	var $uId= output['id'];
 	var $uActor1_fname = $('#content-actor1_fname').val();
 	var $uActor1_lname = $('#content-actor1_lname').val();
 	var $uActor2_fname = $('#content-actor2_fname').val();
 	var $uActor2_lname = $('#content-actor2_lname').val();
 	
-	var postData = {title: $uTitle,description: $uDescription, director: $uDirector, type: $uType,contentProviderId: $uId, actorOneFirstname: $uActor1_fname, actorOneLastname: $uActor1_lname, actorTwoFirstname: $uActor2_fname, actorTwoLastname: $uActor2_lname};
+	
+	var postData = {title: $uTitle,description: $uDescription, director: $uDirector, contentTypeName: $uType,contentProviderId: $uId, actorOneFirstname: $uActor1_fname, actorOneLastname: $uActor1_lname, actorTwoFirstname: $uActor2_fname, actorTwoLastname: $uActor2_lname};
 	
 	var getIP = sessionStorage.getItem("IP");
 	var IP = JSON.parse(getIP);
 	
-	API_url = IP + "/contentProvider/uploadContent";
+	API_url = IP + "/contentProvider/addContent";
 	uploadData(postData, API_url);
 });
 

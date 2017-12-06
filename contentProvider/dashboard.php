@@ -81,11 +81,11 @@
 										<!--div id="content-icon-upload-msg" class="glyphicon glyphicon-chevron-right"></div>
 										<span id="content-text-upload-msg">upload Content</span-->
 									</div>
-									<input id="content-title" name="content-title" class="form-control" type="text" placeholder="Title" required style="margin-top:10px;">
-									<textarea id="content-description" name="content-description" class="form-control" type="text" placeholder="Description" required style="margin-top:10px;"></textarea>
-									<input id="content-director" name="content-director" class="form-control" type="text" placeholder="Director" required style="margin-top:10px;">
+									<input id="content-upload-title" name="content-upload-title" class="form-control" type="text" placeholder="Title" required style="margin-top:10px;">
+									<textarea id="content-upload-description" name="content-upload-description" class="form-control" type="text" placeholder="Description" required style="margin-top:10px;"></textarea>
+									<input id="content-upload-director" name="content-upload-director" class="form-control" type="text" placeholder="Director" required style="margin-top:10px;">
 									<div class="form-group" style="margin-top:10px;">
-									<select class="form-control" id="content-type" name="content-type" required>
+									<select class="form-control" id="content-upload-type" name="content-upload-type" required>
 										<option value="">--Type--</option>
 										<option value="movies">MOVIES</option>
 										<option value="documentaries">DOCUMENTARIES</option>
@@ -100,7 +100,7 @@
 								</div>
 								<div class="modal-footer">
 									<div>
-										<button type="submit" class="btn btn-primary btn-lg btn-block" name="content-upload-btn" id="content-upload-btn" value="upload-submit">submit</button>
+										<button type="submit" class="btn btn-primary btn-lg btn-block" name="content-upload-btn" id="content-upload-btn" value="submit">submit</button>
 									</div>
 								</div>
 							</form>						

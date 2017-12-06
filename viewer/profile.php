@@ -54,78 +54,7 @@
 		</div>
 	</div>
 	
-	<div class="container pcontent">
-	<div class="row">
-		<!-- Pricing -->
-		<div class="col-md-3">
-			<div class="pricing hover-effect">
-				<div class="pricing-head">
-					<h3>Plan 1<span>
-					Movies + ads</span>
-					</h3>
-					<h4><i>$</i>24<i>.99</i>
-					<span>
-					Per Month </span>
-					</h4>
-				</div>
-				<div class="pricing-footer">
-					<p> Watch unlimited movies with ads.
-					</p>
-				</div>
-			</div>
-		</div>
-		<div class="col-md-3">
-			<div class="pricing hover-effect">
-				<div class="pricing-head">
-					<h3>Plan 2<span>
-					Movies + no ads </span>
-					</h3>
-					<h4><i>$</i>29<i>.99</i>
-					<span>
-					Per Month </span>
-					</h4>
-				</div>
-				<div class="pricing-footer">
-					<p> Watch unlimited movies without any interruptions.
-					</p>
-				</div>
-			</div>
-		</div>
-		<div class="col-md-3">
-			<div class="pricing pricing-active hover-effect">
-				<div class="pricing-head pricing-head-active">
-					<h3>Plan 3<span>
-					Movies, Documentaries, Series + ads </span>
-					</h3>
-					<h4><i>$</i>44<i>.99</i>
-					<span>
-					Per Month </span>
-					</h4>
-				</div>
-				<div class="pricing-footer">
-					<p> Access to ALL videos with ads.</p>
-				</div>
-			</div>
-		</div>
-		<div class="col-md-3">
-			<div class="pricing hover-effect">
-				<div class="pricing-head">
-					<h3>Plan 4<span>
-					Movies, Documentaries, Series + no ads </span>
-					</h3>
-					<h4><i>$</i>49<i>.99</i>
-					<span>
-					Per Month </span>
-					</h4>
-				</div>
-				<div class="pricing-footer">
-					<p> Access to ALL videos without ANY ads.</p>
-				</div>
-			</div>
-		</div>
-		<!--//End Pricing -->
-	
-	
+	<?php include("viewerPricingTable.php"); ?>
 	
 	<!-- BEGIN # CHANGE PLAN MODAL LOGIN -->
 	<div class="modal fade" id="change-plan-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">

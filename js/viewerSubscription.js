@@ -2,7 +2,7 @@ function addDropdowns(selId, variable, json){
 		var sel = document.getElementById(selId);
 		for (var i in json) {
 			var opt = document.createElement('option');
-			opt.innerHTML = json[i][variable];
+			opt.innerHTML = "Plan " + json[i][variable] +" - $" + json[i]["price"] ;
 			opt.value = json[i][variable];
 			sel.appendChild(opt);
 		}
@@ -37,12 +37,11 @@ function addDropdowns(selId, variable, json){
 	$(document).on('click', '#change-plan-btn', function(){ 
 		var readSessionData = sessionStorage.getItem("viewerInfo");
 		var output = JSON.parse(readSessionData);
-		var $viewerId = output["id"];
 		var $subscriptionId = output["subscriptionId"];
 
 		var getIP = sessionStorage.getItem("IP");
 		var IP = JSON.parse(getIP);
-		API_url = IP + "/viewer/getAllSubscriptions?viewerId=" + $viewerId + "&subscriptionId=" + $subscriptionId 
+		API_url = IP + "/viewer/getAllSubscriptions?subscriptionId=" + $subscriptionId;
 		getSubscriptionData(API_url);
 		
 	});
@@ -52,6 +51,7 @@ function addDropdowns(selId, variable, json){
 		var output = JSON.parse(readSessionData);
 		var $viewerId = output["id"];
 		var $subscriptionId = $( "#change-plan_id option:selected" ).text();
+		alert
 		var postData = {viewerId: $viewerId, subscriptionId: $subscriptionId};
 
 		var getIP = sessionStorage.getItem("IP");
