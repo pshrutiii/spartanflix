@@ -39,22 +39,21 @@ function removeData(postData, url){
 
 function uploadData(postData, url){
 	var jqxhr = $.ajax(
-			{
-				method: "POST",
-				datatype : "json",
-				url: url,
-				data: postData
-			}
-			)
-			.done(function(data) {
-				console.log("UPLOADED");
-			})
-			.fail(function(status) {
-				console.log(status);
-			});
+	{
+		method: "POST",
+		datatype : "json",
+		url: url,
+		data: postData
+	}
+	)
+	.done(function(data) {
+		console.log("UPLOADED");
+	})
+	.fail(function(status) {
+		console.log(status);
+	});
 
 }
-
 
 
 $(document).ready(function(){
@@ -103,8 +102,12 @@ $(document).on('click', '#content-upload-btn', function(){
 	var $uDirector = $('#content-director').val();
 	var $uType= $('#content-type').val();
 	var $uId= output['id'];
-	alert($uTitle, $uDescription);
-	var postData = {title: $uTitle,description: $uDescription, director: $uDirector, type: $uType,contentProviderId: $uId};
+	var $uActor1_fname = $('#content-actor1_fname').val();
+	var $uActor1_lname = $('#content-actor1_lname').val();
+	var $uActor2_fname = $('#content-actor2_fname').val();
+	var $uActor2_lname = $('#content-actor2_lname').val();
+	
+	var postData = {title: $uTitle,description: $uDescription, director: $uDirector, type: $uType,contentProviderId: $uId, actorOneFirstname: $uActor1_fname, actorOneLastname: $uActor1_lname, actorTwoFirstname: $uActor2_fname, actorTwoLastname: $uActor2_lname};
 	
 	var getIP = sessionStorage.getItem("IP");
 	var IP = JSON.parse(getIP);

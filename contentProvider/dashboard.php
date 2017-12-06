@@ -86,12 +86,16 @@
 									<input id="content-director" name="content-director" class="form-control" type="text" placeholder="Director" required style="margin-top:10px;">
 									<div class="form-group" style="margin-top:10px;">
 									<select class="form-control" id="content-type" name="content-type" required>
-										<option value=""></option>
-										<option value="1">MOVIES</option>
-										<option value="2">DOCUMENTARIES</option>
-										<option value="3">SERIES</option>
+										<option value="">--Type--</option>
+										<option value="movies">MOVIES</option>
+										<option value="documentaries">DOCUMENTARIES</option>
+										<option value="series">SERIES</option>
 									</select>
-							</div>  
+									</div>  
+									<input id="content-actor1_fname" name="content-actor1_fname" class="form-control" type="text" placeholder="Actor 1 Last Name" required style="margin-top:10px;">
+									<input id="content-actor1_lname" name="content-actor1_lname" class="form-control" type="text" placeholder="Actor 1 Last Name" required style="margin-top:10px;">
+									<input id="content-actor2_fname" name="content-actor2_fname" class="form-control" type="text" placeholder="Actor 2 First Name" required style="margin-top:10px;">
+									<input id="content-actor2_lname" name="content-actor2_lname" class="form-control" type="text" placeholder="Actor 2 Last Name" required style="margin-top:10px;">
 									<!--input id="content-approved"  name="content-approved" class="form-control" type="text" placeholder="Approved" required-->
 								</div>
 								<div class="modal-footer">
