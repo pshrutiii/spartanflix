@@ -42,7 +42,7 @@
 						<div class="col-sm-6">
 							<i class="fa fa-bell" aria-hidden="true"></i>Subscription Plan: <span id="subscriptionPlan"></span>
 							<br/>
-							<i class="fa fa-users" aria-hidden="true"></i>dependent@test.com<span id="dependentEmail"></span>
+							<i class="fa fa-users" aria-hidden="true"></i><span id="dependentEmail"></span>
 						</div>
 						<div class="col-sm-3">
 							<button type="button" class="btn btn-primary" name="change-plan-btn" id="change-plan-btn" value="change-plan" data-toggle="modal" data-target="#change-plan-modal">Change Plan</button>
