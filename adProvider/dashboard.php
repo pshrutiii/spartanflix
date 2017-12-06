@@ -81,15 +81,6 @@
 									</div>
 									<input id="content-title" name="content-title" class="form-control" type="text" placeholder="Title" required style="margin-top:10px;">
 									<textarea id="content-description" name="content-description" class="form-control" type="text" placeholder="Description" required style="margin-top:10px;"></textarea>
-									<input id="content-director" name="content-director" class="form-control" type="text" placeholder="Director" required style="margin-top:10px;">
-									<div class="form-group" style="margin-top:10px;">
-									<select class="form-control" id="content-type" name="content-type" required>
-										<option value=""></option>
-										<option value="1">MOVIES</option>
-										<option value="2">DOCUMENTARIES</option>
-										<option value="3">SERIES</option>
-									</select>
-							</div>  
 									<!--input id="content-approved"  name="content-approved" class="form-control" type="text" placeholder="Approved" required-->
 								</div>
 								<div class="modal-footer">

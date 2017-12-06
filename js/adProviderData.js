@@ -39,19 +39,19 @@ function removeData(postData, url){
 
 function uploadData(postData, url){
 	var jqxhr = $.ajax(
-			{
-				method: "POST",
-				datatype : "json",
-				url: url,
-				data: postData
-			}
-			)
-			.done(function(data) {
-				console.log("UPLOADED");
-			})
-			.fail(function(status) {
-				console.log(status);
-			});
+	{
+		method: "POST",
+		datatype : "json",
+		url: url,
+		data: postData
+	}
+	)
+	.done(function(data) {
+		console.log("UPLOADED");
+	})
+	.fail(function(status) {
+		console.log(status);
+	});
 
 }
 
@@ -98,10 +98,8 @@ $(document).on('click', '#content-upload-btn', function(){
 		
 	var $uTitle = $('#content-title').val();
 	var $uDescription = $('#content-description').val();
-	var $uDirector = $('#content-director').val();
-	var $uType= $('#content-type').val();
 	var $uId= output['id'];
-	var postData = {title: $uTitle,description: $uDescription, director: $uDirector, type: $uType,adProviderId: $uId};
+	var postData = {title: $uTitle,description: $uDescription, adProviderId: $uId};
 	
 	var getIP = sessionStorage.getItem("IP");
 	var IP = JSON.parse(getIP);
