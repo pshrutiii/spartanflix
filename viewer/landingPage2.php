@@ -18,7 +18,7 @@
 <body>
 	<?php 
 		include("../includes/viewerNav2.html"); 
-		include("ads_template.php");
+		include("noAds_template.php");
 		include("../includes/footer.html"); 
 	?>
 <br/><br/><br/><br/><br/>

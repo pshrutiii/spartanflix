@@ -3,7 +3,7 @@ function getData(dashboardURL, favoriteURL, historyURL){
 	$.getJSON( dashboardURL, { format: "json"} )
 		.done(function(json) {
 			for (var item in json) {
-				$("#dashboard-tabs").append("<div class='col-md-3 col-sm-3' ><a href='#page-URL' class='portfolio-box'><img src='' class='img-responsive ' alt=''><div class='portfolio-box-caption'><div class='portfolio-box-caption-content'><div class='project-name'>" + json[item]["title"] + "</div><div class='project-category text-faded'>" + json[item]["director"] + "</div><div class='project-type text-faded'>" + json[item]["contentType"] + "</div><div class='project-providers text-faded' hidden>" + json[item]["contentProviderName"] + "</div></div></div></a></div>");
+				$("#dashboard-tabs").append("<div class='col-md-3 col-sm-3' id='tileDiv'><a href='#' class='portfolio-box'><img src='' class='img-responsive ' alt=''><div class='portfolio-box-caption'><div class='portfolio-box-caption-content'><div class='project-name'>" + json[item]["title"] + "</div><div class='project-category text-faded'>" + json[item]["director"] + "</div><div class='project-type text-faded'>" + json[item]["contentType"] + "</div><div class='project-providers text-faded' hidden>" + json[item]["contentProviderName"] + "</div></div></div></a></div>");
 			}
 		})
 		.fail(function( jqxhr, textStatus, error ) {
@@ -160,4 +160,19 @@ $(document).on('click', '.history-delete-btn', function(){
 });
 
 
+//Show corresponding Landing page
+$(document).on('click', '.portfolio-box', function(){ 
+	var readSessionData = sessionStorage.getItem("viewerInfo");
+	var output = JSON.parse(readSessionData);
+	planId = output["subscriptionId"];
+	var divVal = $(this).text();
+	//localStorage.setItem("contentInfo",divVal);
+	if(planId % 2 == 0){
+		//alert("No ADS plan");
+		window.location.href = "../viewer/landingPage2.php";
+	}else{
+		//alert("Ads plan");
+		window.location.href = "../viewer/landingPage.php";
+	}
 
+});
