@@ -166,7 +166,7 @@ $(document).on('click', '.portfolio-box', function(){
 	var output = JSON.parse(readSessionData);
 	planId = output["subscriptionId"];
 	var divVal = $(this).text();
-	//localStorage.setItem("contentInfo",divVal);
+	localStorage.setItem("contentInfo",divVal);
 	if(planId % 2 == 0){
 		//alert("No ADS plan");
 		window.location.href = "../viewer/landingPage2.php";
