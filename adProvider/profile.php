@@ -54,46 +54,7 @@
 		</div>
 	</div>
 	
-	<div class="container pcontent" style="margin-left: 30%;">
-	<div class="row">
-		<!-- Pricing -->
-		<div class="col-md-3">
-			<div class="pricing hover-effect">
-				<div class="pricing-head">
-					<h3>Plan 1<span>
-					30 day</span>
-					</h3>
-					<h4><i>$</i>24<i>.99</i>
-					<span>
-					Per Month </span>
-					</h4>
-				</div>
-				<div class="pricing-footer">
-					<p> Your ads would be shown for 30 days.
-					</p>
-				</div>
-			</div>
-		</div>
-		<div class="col-md-3">
-			<div class="pricing hover-effect">
-				<div class="pricing-head">
-					<h3>Plan 2<span>
-					60 day</span>
-					</h3>
-					<h4><i>$</i>29<i>.99</i>
-					<span>
-					Per Month </span>
-					</h4>
-				</div>
-				<div class="pricing-footer">
-					<p> Your ads would be shown for 60 days
-					</p>
-				</div>
-			</div>
-		</div>
-		<!--//End Pricing -->
-	</div>
-	</div>
+	<?php include("../viewer/viewerPricingTable.php"); ?>
 	
 	
 	<!-- BEGIN # CHANGE PLAN MODAL LOGIN -->
@@ -120,7 +81,7 @@
         		    	</div>
 				        <div class="modal-footer">
                             <div>
-                                <button type="submit" class="btn btn-primary btn-lg btn-block" id="change-plan-update"  name="change-plan-update" value="change-plan-update">Update</button>
+                                <button type="submit" class="btn btn-primary btn-lg btn-block" id="change-plan-update"  name="change-plan-update" >Update</button>
                             </div>
 				    	    <div>
                                 

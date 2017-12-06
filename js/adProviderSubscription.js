@@ -2,13 +2,12 @@ function addDropdowns(selId, variable, json){
 		var sel = document.getElementById(selId);
 		for (var i in json) {
 			var opt = document.createElement('option');
-			opt.innerHTML = json[i][variable];
+			opt.innerHTML = "Plan " + json[i][variable] +" - $" + json[i]["price"] ;
 			opt.value = json[i][variable];
 			sel.appendChild(opt);
 		}
 	}
 	function getSubscriptionData(url){	 
- 
 		$.getJSON( url, { format: "json"} )
 			.done(function( json ) {
 				addDropdowns('change-plan_id', 'id', json);
@@ -24,15 +23,24 @@ function addDropdowns(selId, variable, json){
 	}
 	
 	function updateSubscriptionData(postData, url){
-		$.getJSON( url, { format: "json"} )
-			.done(function( json ) {
-				//alert(json['id']);
-				console.log(json);
-			})
-			.fail(function( jqxhr, textStatus, error ) {
-				var err = textStatus + ", " + error;
-				console.log( "Request Failed: " + err );
-			});
+		var jqxhr = $.ajax(
+		{
+			method: "POST",
+			datatype : "json",
+			url: url,
+			data: postData
+		}
+		)
+		.done(function(data) {
+			//update the session storage subscriptionID value
+			var readSessionData = sessionStorage.getItem("adProviderInfo");
+			var output = JSON.parse(readSessionData);
+			output["subscriptionId"] = data['id'];
+			console.log(output["subscriptionId"]);
+		})
+		.fail(function(status) {
+			console.log(status);
+		});
 	}
 	
 	$(document).on('click', '#change-plan-btn', function(){ 
@@ -43,7 +51,8 @@ function addDropdowns(selId, variable, json){
 
 		var getIP = sessionStorage.getItem("IP");
 		var IP = JSON.parse(getIP);
-		API_url = IP + "/adProvider/getAllSubscriptions?adProviderId=" + $adProviderId + "&subscriptionId=" + $subscriptionId 
+
+		API_url = IP + "/adProvider/getAllSubscriptions?subscriptionId=" + $subscriptionId 
 		getSubscriptionData(API_url);
 		
 	});
@@ -52,12 +61,12 @@ function addDropdowns(selId, variable, json){
 		var readSessionData = sessionStorage.getItem("adProviderInfo");
 		var output = JSON.parse(readSessionData);
 		var $adProviderId = output["id"];
-		var $subscriptionId = $( "#change-plan_id option:selected" ).text();
+		var $subscriptionId = $( "#change-plan_id" ).val();
 		var postData = {adProviderId: $adProviderId, subscriptionId: $subscriptionId};
 		
 		var getIP = sessionStorage.getItem("IP");
 		var IP = JSON.parse(getIP);
-		API_url = IP + "/adProvider/changeSubscription";
+		API_url = IP + "/adProvider/changeSubscription"; 
 		updateSubscriptionData(postData, API_url);
 
 	});

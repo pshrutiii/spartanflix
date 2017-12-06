@@ -24,14 +24,23 @@ function addDropdowns(selId, variable, json){
 	}
 	
 	function updateSubscriptionData(postData, url){
-		$.getJSON( url, { format: "json"} )
-			.done(function( json ) {
-				alert(json['id']);
-			})
-			.fail(function( jqxhr, textStatus, error ) {
-				var err = textStatus + ", " + error;
-				console.log( "Request Failed: " + err );
-			});
+		var jqxhr = $.ajax(
+		{
+			method: "POST",
+			datatype : "json",
+			url: url,
+			data: postData
+		}
+		)
+		.done(function(data) {
+			//var userObjectString = JSON.stringify(data);
+			//window.sessionStorage.setItem("subscriptionID",userObjectString)
+			//update the session storage subscriptionID value
+			console.log("UPDATED");
+		})
+		.fail(function(status) {
+			console.log(status);
+		});
 	}
 	
 	$(document).on('click', '#change-plan-btn', function(){ 
@@ -50,8 +59,7 @@ function addDropdowns(selId, variable, json){
 		var readSessionData = sessionStorage.getItem("viewerInfo");
 		var output = JSON.parse(readSessionData);
 		var $viewerId = output["id"];
-		var $subscriptionId = $( "#change-plan_id option:selected" ).text();
-		alert
+		var $subscriptionId = $( "#change-plan_id").val();
 		var postData = {viewerId: $viewerId, subscriptionId: $subscriptionId};
 
 		var getIP = sessionStorage.getItem("IP");

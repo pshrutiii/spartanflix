@@ -45,7 +45,7 @@
 							<i class="fa fa-users" aria-hidden="true"></i>dependent@test.com<span id="dependentEmail"></span>
 						</div>
 						<div class="col-sm-3">
-							<button type="submit" class="btn btn-primary" name="change-plan-btn" id="change-plan-btn" value="change-plan" data-toggle="modal" data-target="#change-plan-modal">Change Plan</button>
+							<button type="button" class="btn btn-primary" name="change-plan-btn" id="change-plan-btn" value="change-plan" data-toggle="modal" data-target="#change-plan-modal">Change Plan</button>
 						</div>
 
 					</div>
@@ -80,7 +80,7 @@
         		    	</div>
 				        <div class="modal-footer">
                             <div>
-                                <button type="submit" class="btn btn-primary btn-lg btn-block" id="change-plan-update"  name="change-plan-update" value="change-plan-update">Update</button>
+                                <button type="submit" class="btn btn-primary btn-lg btn-block" id="change-plan-update"  name="change-plan-update" >Update</button>
                             </div>
 				    	    <div>
                                 
