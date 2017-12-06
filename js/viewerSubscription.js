@@ -69,7 +69,7 @@ $(document).on('click', '#change-plan-update', function(){
 function getDependentEmail(url){
 	$.getJSON( url, { format: "json"} )
 		.done(function( json ) {
-			$("#dependentEmail").text(json['dependentEmail']);
+			$("#dependentEmail").text(json[0]['dependentEmail']);
 		})
 		.fail(function( jqxhr, textStatus, error ) {
 			var err = textStatus + ", " + error;

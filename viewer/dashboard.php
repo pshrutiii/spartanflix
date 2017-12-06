@@ -90,7 +90,7 @@
 							<div class="row">    
 								<div class="col-xs-8 col-xs-offset-2">
 									<div class="input-group">
-										<div class="input-group-btn history_search-panel">
+										<!--div class="input-group-btn history_search-panel">
 											<button type="button" class="btn coloredBtn dropdown-toggle" data-toggle="dropdown" style="border-radius:4px;">
 												<span id="search_concept">Filter by</span> <span class="caret"></span>
 											</button>
@@ -99,9 +99,9 @@
 											  <li><a href="">Documentry</a></li>
 											  <li><a href="">Series</a></li>
 											</ul>
-										</div>
+										</div-->
 										<input type="hidden" name="search_param" value="all" id="search_param">         
-										<input type="text" class="form-control" name="searchVal" id="searchVal" placeholder="Search term...">
+										<input type="text" class="form-control" name="searchVal_h" id="searchVal_h" placeholder="Search term...">
 										<span class="input-group-btn">
 											<button class="btn coloredBtn" type="button" style="border-radius:0px; padding:10px;" id="history-search-btn"><span class="glyphicon glyphicon-search"></span></button>
 										</span>
@@ -114,7 +114,7 @@
 						  <thead>
 							<tr>
 							  <th>Title</th>
-							  <th>Director</th>
+							  <th>Description</th>
 							  <th>Year</th>
 							  <th>Type</th>
 							  <th>Rating</th>
