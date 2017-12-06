@@ -103,6 +103,7 @@ $(document).on('click', '#content-upload-btn', function(){
 	var $uDirector = $('#content-director').val();
 	var $uType= $('#content-type').val();
 	var $uId= output['id'];
+	alert($uTitle, $uDescription);
 	var postData = {title: $uTitle,description: $uDescription, director: $uDirector, type: $uType,contentProviderId: $uId};
 	
 	var getIP = sessionStorage.getItem("IP");
