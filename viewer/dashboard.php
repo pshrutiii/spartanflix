@@ -101,9 +101,9 @@
 											</ul>
 										</div>
 										<input type="hidden" name="search_param" value="all" id="search_param">         
-										<input type="text" class="form-control" name="x" placeholder="Search term...">
+										<input type="text" class="form-control" name="searchVal" id="searchVal" placeholder="Search term...">
 										<span class="input-group-btn">
-											<button class="btn coloredBtn" type="button" style="border-radius:0px; padding:10px;"><span class="glyphicon glyphicon-search"></span></button>
+											<button class="btn coloredBtn" type="button" style="border-radius:0px; padding:10px;" id="history-search-btn"><span class="glyphicon glyphicon-search"></span></button>
 										</span>
 									</div>
 								</div>

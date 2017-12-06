@@ -55,8 +55,6 @@ function uploadData(postData, url){
 
 }
 
-
-
 $(document).ready(function(){
 	var readSessionData = sessionStorage.getItem("adProviderInfo");
 	var output = JSON.parse(readSessionData);
@@ -107,3 +105,42 @@ $(document).on('click', '#content-upload-btn', function(){
 	API_url = IP + "/adProvider/addAd";
 	uploadData(postData, API_url);
 });
+
+function getSearchData(url){	 
+	$.getJSON( url, { format: "json"} )
+		.done(function(json) {
+			$("#content-dashboard-tab").empty();
+			for (var item in json) {
+				isApproved = json[item]['isApproved'];
+				if (isApproved == "1"){
+					isApproved = "Yes";
+				}
+				else{
+					isApproved = "No";
+				}
+				$("#content-dashboard-tab").append("<tr><td id='content-title'>" + json[item]['title'] +"</td><td id='content-description'>" + json[item]['description'] +"</td><td id='content-id' hidden>" + json[item]['advertisementId'] +"</td><td id='content-approved'>" + isApproved +"</td><td class='content-delete-btn'><i class='fa fa-trash-o' aria-hidden='true' style='color:red;'></i></td></tr>");
+			}
+		})
+		.fail(function( jqxhr, textStatus, error ) {
+			var err = textStatus + ", " + error;
+			console.log( "Request Failed: " + err );
+		});
+}
+
+//Search and filter 
+$(document).on('click', "#adProvider-search-btn", function(){
+	var searchVal = $("#searchVal").val();
+	
+	var readSessionData = sessionStorage.getItem("adProviderInfo");
+	var output = JSON.parse(readSessionData);
+	adProviderId = output["id"];
+	var getIP = sessionStorage.getItem("IP");
+	var IP = JSON.parse(getIP);
+	API_url = IP + "/adProvider/getAllAds?adProviderId=" + adProviderId + "&search="+ searchVal;
+	
+	getSearchData(API_url);
+});
+
+
+
+

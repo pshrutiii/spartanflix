@@ -19,7 +19,7 @@
 					<div class="row" style="margin-top: 0px;">    
 						<div class="col-xs-8 col-xs-offset-2">
 							<div class="input-group">
-								<div class="input-group-btn search-panel">
+								<!--div class="input-group-btn search-panel">
 									<button type="button" class="btn coloredBtn dropdown-toggle" data-toggle="dropdown" style="border-radius:4px;">
 										<span id="search_concept">Filter by</span> <span class="caret"></span>
 									</button>
@@ -29,11 +29,11 @@
 										<li><a href="">Series</a></li>
 										<li><a href="">Ads</a></li>
 									</ul>
-								</div>
+								</div-->
 								<input type="hidden" name="search_param" value="all" id="search_param">         
-								<input type="text" class="form-control" name="x" placeholder="Search term...">
+								<input type="text" class="form-control" name="searchVal" id="searchVal" placeholder="Search term...">
 								<span class="input-group-btn">
-									<button class="btn coloredBtn" type="button" style="border-radius:0px; padding:10px;"><span class="glyphicon glyphicon-search"></span></button>
+									<button class="btn coloredBtn" type="button" style="border-radius:0px; padding:10px;" id="adProvider-search-btn"><span class="glyphicon glyphicon-search"></span></button>
 								</span>
 							</div>
 							<a href="#" data-toggle="modal" data-target="#content-upload-modal">
